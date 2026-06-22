@@ -1,0 +1,26 @@
+customer_id,company_name,country,region,frequency_orders,monetary_total,last_order_date,first_order_date,recency_days,avg_order_value,is_churned,customer_segment
+CACTU,Cactus Comidas para llevar,Argentina,AMER,5,3096.93,2023-08-19,2023-02-11,501,619.39,True,Churned
+DRACD,Drachenblut Delikatessen,Germany,EMEA,6,8075.06,2024-03-02,2023-02-19,305,1345.84,True,Churned
+FRANS,Franchi S.p.A.,Italy,EMEA,8,6642.33,2024-12-10,2023-05-21,22,830.29,False,Active
+CENTC,Centro comercial Moctezuma,Mexico,AMER,3,3602.1,2024-12-27,2024-10-06,5,1200.7,False,Active
+BOTTM,Bottom-Dollar Markets,Canada,AMER,12,14177.79,2024-11-24,2023-02-16,38,1181.48,False,Active
+DUMON,Du monde entier,France,EMEA,2,2167.6,2024-10-15,2024-10-06,78,1083.8,False,At Risk
+ANATR,Ana Trujillo Emparedados,Mexico,AMER,6,7960.2,2023-12-19,2023-04-09,379,1326.7,True,Churned
+BLONP,Blondesddsl père et fils,France,EMEA,5,4626.9,2023-12-06,2023-04-08,392,925.38,True,Churned
+ANTON,Antonio Moreno Taquería,Mexico,AMER,2,7308.47,2024-12-09,2024-10-30,23,3654.24,False,Active
+EASTC,Eastern Connection,UK,EMEA,9,12951.61,2024-12-30,2023-02-22,2,1439.07,False,Active
+FOLKO,Folk och fä HB,Sweden,EMEA,6,6460.78,2024-02-24,2023-02-09,312,1076.8,True,Churned
+FAMIA,Familia Arquibaldo,Brazil,AMER,8,7552.44,2024-11-08,2023-03-15,54,944.06,False,Active
+COMMI,Comércio Mineiro,Brazil,AMER,9,8983.97,2024-12-11,2023-02-04,21,998.22,False,Active
+FRANK,Frankenversand,Germany,EMEA,2,2734.65,2024-12-13,2024-11-17,19,1367.33,False,Active
+CONSH,Consolidated Holdings,UK,EMEA,2,5313.8,2023-05-09,2023-04-12,603,2656.9,True,Churned
+BSBEV,B's Beverages,UK,EMEA,2,2108.85,2023-06-08,2023-05-28,573,1054.43,True,Churned
+AROUT,Around the Horn,UK,EMEA,10,17198.48,2024-12-07,2023-02-25,25,1719.85,False,Active
+BOLID,Bólido Comidas preparadas,Spain,EMEA,2,3195.26,2024-12-14,2024-11-08,18,1597.63,False,Active
+BERGS,Berglunds snabbköp,Sweden,EMEA,10,15858.92,2024-10-22,2023-03-24,71,1585.89,False,At Risk
+FURIB,Furia Bacalhau e Frutos do Mar,Portugal,EMEA,12,10692.69,2024-12-23,2023-01-29,9,891.06,False,Active
+ALFKI,Alfreds Futterkiste,Germany,EMEA,4,6807.67,2023-07-03,2023-01-27,548,1701.92,True,Churned
+BLAUS,Blauer See Delikatessen,Germany,EMEA,3,2575.38,2023-07-20,2023-01-11,531,858.46,True,Churned
+CHOPS,Chop-suey Chinese,Switzerland,EMEA,13,12889.67,2024-11-06,2023-01-30,56,991.51,False,Active
+FOLIG,Folies gourmandes,France,EMEA,3,2523.05,2023-07-10,2023-03-04,541,841.02,True,Churned
+BONAP,Bon app',France,EMEA,14,15139.16,2024-12-24,2023-01-21,8,1081.37,False,Active

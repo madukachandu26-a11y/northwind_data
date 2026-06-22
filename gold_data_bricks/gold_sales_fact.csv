@@ -1,0 +1,393 @@
+order_id,order_date,shipped_date,region,customer_id,company_name,country,employee_id,first_name,last_name,product_id,product_name,category_name,quantity,unit_price,discount,line_revenue
+10248,2023-03-12,2023-03-18,EMEA,ALFKI,Alfreds Futterkiste,Germany,4,Margaret,Peacock,18,Carnarvon Tigers,Seafood,3,62.5,0.1,168.75
+10249,2023-04-19,2023-04-22,EMEA,ALFKI,Alfreds Futterkiste,Germany,1,Nancy,Davolio,8,Northwoods Cranberry Sauce,Condiments,20,40.0,0.0,800.0
+10249,2023-04-19,2023-04-22,EMEA,ALFKI,Alfreds Futterkiste,Germany,1,Nancy,Davolio,17,Alice Mutton,Meat/Poultry,18,39.0,0.0,702.0
+10250,2023-07-03,2023-07-14,EMEA,ALFKI,Alfreds Futterkiste,Germany,7,Robert,King,19,Teatime Chocolate Biscuits,Confections,23,9.2,0.05,201.02
+10250,2023-07-03,2023-07-14,EMEA,ALFKI,Alfreds Futterkiste,Germany,7,Robert,King,9,Mishi Kobe Niku,Meat/Poultry,11,97.0,0.0,1067.0
+10250,2023-07-03,2023-07-14,EMEA,ALFKI,Alfreds Futterkiste,Germany,7,Robert,King,1,Chai,Beverages,5,18.0,0.0,90.0
+10250,2023-07-03,2023-07-14,EMEA,ALFKI,Alfreds Futterkiste,Germany,7,Robert,King,6,Grandma's Boysenberry Spread,Condiments,25,25.0,0.0,625.0
+10251,2023-01-27,2023-01-31,EMEA,ALFKI,Alfreds Futterkiste,Germany,7,Robert,King,12,Queso Manchego La Pastora,Dairy Products,24,38.0,0.05,866.4
+10251,2023-01-27,2023-01-31,EMEA,ALFKI,Alfreds Futterkiste,Germany,7,Robert,King,9,Mishi Kobe Niku,Meat/Poultry,18,97.0,0.0,1746.0
+10251,2023-01-27,2023-01-31,EMEA,ALFKI,Alfreds Futterkiste,Germany,7,Robert,King,2,Chang,Beverages,30,19.0,0.05,541.5
+10252,2023-04-09,2023-04-13,AMER,ANATR,Ana Trujillo Emparedados,Mexico,1,Nancy,Davolio,10,Ikura,Seafood,28,31.0,0.0,868.0
+10252,2023-04-09,2023-04-13,AMER,ANATR,Ana Trujillo Emparedados,Mexico,1,Nancy,Davolio,3,Aniseed Syrup,Condiments,28,10.0,0.0,280.0
+10253,2023-07-14,2023-07-21,AMER,ANATR,Ana Trujillo Emparedados,Mexico,8,Laura,Callahan,6,Grandma's Boysenberry Spread,Condiments,7,25.0,0.15,148.75
+10253,2023-07-14,2023-07-21,AMER,ANATR,Ana Trujillo Emparedados,Mexico,8,Laura,Callahan,12,Queso Manchego La Pastora,Dairy Products,9,38.0,0.15,290.7
+10253,2023-07-14,2023-07-21,AMER,ANATR,Ana Trujillo Emparedados,Mexico,8,Laura,Callahan,19,Teatime Chocolate Biscuits,Confections,30,9.2,0.15,234.6
+10254,2023-11-28,2023-12-02,AMER,ANATR,Ana Trujillo Emparedados,Mexico,3,Janet,Leverling,6,Grandma's Boysenberry Spread,Condiments,13,25.0,0.0,325.0
+10254,2023-11-28,2023-12-02,AMER,ANATR,Ana Trujillo Emparedados,Mexico,3,Janet,Leverling,15,Genen Shouyu,Condiments,30,15.5,0.15,395.25
+10255,2023-12-19,2023-12-30,AMER,ANATR,Ana Trujillo Emparedados,Mexico,4,Margaret,Peacock,2,Chang,Beverages,26,19.0,0.0,494.0
+10255,2023-12-19,2023-12-30,AMER,ANATR,Ana Trujillo Emparedados,Mexico,4,Margaret,Peacock,8,Northwoods Cranberry Sauce,Condiments,13,40.0,0.0,520.0
+10255,2023-12-19,2023-12-30,AMER,ANATR,Ana Trujillo Emparedados,Mexico,4,Margaret,Peacock,20,Sir Rodney's Marmalade,Confections,3,81.0,0.0,243.0
+10256,2023-10-18,2023-10-26,AMER,ANATR,Ana Trujillo Emparedados,Mexico,4,Margaret,Peacock,13,Konbu,Seafood,5,6.0,0.0,30.0
+10256,2023-10-18,2023-10-26,AMER,ANATR,Ana Trujillo Emparedados,Mexico,4,Margaret,Peacock,15,Genen Shouyu,Condiments,24,15.5,0.1,334.8
+10256,2023-10-18,2023-10-26,AMER,ANATR,Ana Trujillo Emparedados,Mexico,4,Margaret,Peacock,5,Chef Anton's Gumbo Mix,Condiments,18,21.35,0.0,384.3
+10256,2023-10-18,2023-10-26,AMER,ANATR,Ana Trujillo Emparedados,Mexico,4,Margaret,Peacock,9,Mishi Kobe Niku,Meat/Poultry,24,97.0,0.1,2095.2
+10257,2023-08-08,2023-08-20,AMER,ANATR,Ana Trujillo Emparedados,Mexico,7,Robert,King,5,Chef Anton's Gumbo Mix,Condiments,16,21.35,0.0,341.6
+10257,2023-08-08,2023-08-20,AMER,ANATR,Ana Trujillo Emparedados,Mexico,7,Robert,King,17,Alice Mutton,Meat/Poultry,25,39.0,0.0,975.0
+10258,2024-12-09,2024-12-21,AMER,ANTON,Antonio Moreno Taquería,Mexico,2,Andrew,Fuller,20,Sir Rodney's Marmalade,Confections,18,81.0,0.2,1166.4
+10258,2024-12-09,2024-12-21,AMER,ANTON,Antonio Moreno Taquería,Mexico,2,Andrew,Fuller,15,Genen Shouyu,Condiments,1,15.5,0.15,13.17
+10258,2024-12-09,2024-12-21,AMER,ANTON,Antonio Moreno Taquería,Mexico,2,Andrew,Fuller,17,Alice Mutton,Meat/Poultry,24,39.0,0.0,936.0
+10258,2024-12-09,2024-12-21,AMER,ANTON,Antonio Moreno Taquería,Mexico,2,Andrew,Fuller,9,Mishi Kobe Niku,Meat/Poultry,22,97.0,0.1,1920.6
+10259,2024-10-30,2024-11-07,AMER,ANTON,Antonio Moreno Taquería,Mexico,2,Andrew,Fuller,6,Grandma's Boysenberry Spread,Condiments,17,25.0,0.2,340.0
+10259,2024-10-30,2024-11-07,AMER,ANTON,Antonio Moreno Taquería,Mexico,2,Andrew,Fuller,15,Genen Shouyu,Condiments,6,15.5,0.1,83.7
+10259,2024-10-30,2024-11-07,AMER,ANTON,Antonio Moreno Taquería,Mexico,2,Andrew,Fuller,1,Chai,Beverages,30,18.0,0.0,540.0
+10259,2024-10-30,2024-11-07,AMER,ANTON,Antonio Moreno Taquería,Mexico,2,Andrew,Fuller,9,Mishi Kobe Niku,Meat/Poultry,28,97.0,0.15,2308.6
+10260,2023-06-15,2023-06-26,EMEA,AROUT,Around the Horn,UK,9,Anne,Dodsworth,16,Pavlova,Confections,30,17.45,0.0,523.5
+10260,2023-06-15,2023-06-26,EMEA,AROUT,Around the Horn,UK,9,Anne,Dodsworth,1,Chai,Beverages,29,18.0,0.2,417.6
+10260,2023-06-15,2023-06-26,EMEA,AROUT,Around the Horn,UK,9,Anne,Dodsworth,4,Chef Anton's Cajun Seasoning,Condiments,26,22.0,0.0,572.0
+10261,2023-09-03,2023-09-06,EMEA,AROUT,Around the Horn,UK,4,Margaret,Peacock,3,Aniseed Syrup,Condiments,24,10.0,0.05,228.0
+10262,2023-03-12,2023-03-23,EMEA,AROUT,Around the Horn,UK,3,Janet,Leverling,18,Carnarvon Tigers,Seafood,28,62.5,0.1,1575.0
+10262,2023-03-12,2023-03-23,EMEA,AROUT,Around the Horn,UK,3,Janet,Leverling,6,Grandma's Boysenberry Spread,Condiments,14,25.0,0.0,350.0
+10262,2023-03-12,2023-03-23,EMEA,AROUT,Around the Horn,UK,3,Janet,Leverling,9,Mishi Kobe Niku,Meat/Poultry,30,97.0,0.1,2619.0
+10262,2023-03-12,2023-03-23,EMEA,AROUT,Around the Horn,UK,3,Janet,Leverling,17,Alice Mutton,Meat/Poultry,25,39.0,0.15,828.75
+10263,2024-12-07,2024-12-13,EMEA,AROUT,Around the Horn,UK,5,Steven,Buchanan,15,Genen Shouyu,Condiments,4,15.5,0.0,62.0
+10263,2024-12-07,2024-12-13,EMEA,AROUT,Around the Horn,UK,5,Steven,Buchanan,17,Alice Mutton,Meat/Poultry,8,39.0,0.0,312.0
+10263,2024-12-07,2024-12-13,EMEA,AROUT,Around the Horn,UK,5,Steven,Buchanan,20,Sir Rodney's Marmalade,Confections,11,81.0,0.0,891.0
+10264,2024-08-25,2024-09-05,EMEA,AROUT,Around the Horn,UK,4,Margaret,Peacock,1,Chai,Beverages,23,18.0,0.15,351.9
+10264,2024-08-25,2024-09-05,EMEA,AROUT,Around the Horn,UK,4,Margaret,Peacock,3,Aniseed Syrup,Condiments,2,10.0,0.0,20.0
+10265,2023-03-11,2023-03-14,EMEA,AROUT,Around the Horn,UK,6,Michael,Suyama,9,Mishi Kobe Niku,Meat/Poultry,7,97.0,0.1,611.1
+10265,2023-03-11,2023-03-14,EMEA,AROUT,Around the Horn,UK,6,Michael,Suyama,16,Pavlova,Confections,5,17.45,0.15,74.16
+10266,2024-08-07,2024-08-19,EMEA,AROUT,Around the Horn,UK,8,Laura,Callahan,14,Tofu,Produce,22,23.25,0.05,485.92
+10266,2024-08-07,2024-08-19,EMEA,AROUT,Around the Horn,UK,8,Laura,Callahan,7,Uncle Bob's Organic Dried Pears,Produce,12,30.0,0.05,342.0
+10266,2024-08-07,2024-08-19,EMEA,AROUT,Around the Horn,UK,8,Laura,Callahan,4,Chef Anton's Cajun Seasoning,Condiments,14,22.0,0.05,292.6
+10266,2024-08-07,2024-08-19,EMEA,AROUT,Around the Horn,UK,8,Laura,Callahan,18,Carnarvon Tigers,Seafood,28,62.5,0.15,1487.5
+10267,2023-02-25,2023-03-01,EMEA,AROUT,Around the Horn,UK,1,Nancy,Davolio,4,Chef Anton's Cajun Seasoning,Condiments,7,22.0,0.1,138.6
+10267,2023-02-25,2023-03-01,EMEA,AROUT,Around the Horn,UK,1,Nancy,Davolio,8,Northwoods Cranberry Sauce,Condiments,15,40.0,0.0,600.0
+10267,2023-02-25,2023-03-01,EMEA,AROUT,Around the Horn,UK,1,Nancy,Davolio,7,Uncle Bob's Organic Dried Pears,Produce,14,30.0,0.0,420.0
+10268,2023-10-13,2023-10-23,EMEA,AROUT,Around the Horn,UK,4,Margaret,Peacock,18,Carnarvon Tigers,Seafood,3,62.5,0.2,150.0
+10268,2023-10-13,2023-10-23,EMEA,AROUT,Around the Horn,UK,4,Margaret,Peacock,4,Chef Anton's Cajun Seasoning,Condiments,28,22.0,0.0,616.0
+10268,2023-10-13,2023-10-23,EMEA,AROUT,Around the Horn,UK,4,Margaret,Peacock,2,Chang,Beverages,6,19.0,0.05,108.3
+10268,2023-10-13,2023-10-23,EMEA,AROUT,Around the Horn,UK,4,Margaret,Peacock,1,Chai,Beverages,16,18.0,0.05,273.6
+10269,2023-08-07,2023-08-16,EMEA,AROUT,Around the Horn,UK,1,Nancy,Davolio,1,Chai,Beverages,10,18.0,0.05,171.0
+10269,2023-08-07,2023-08-16,EMEA,AROUT,Around the Horn,UK,1,Nancy,Davolio,13,Konbu,Seafood,23,6.0,0.15,117.3
+10269,2023-08-07,2023-08-16,EMEA,AROUT,Around the Horn,UK,1,Nancy,Davolio,9,Mishi Kobe Niku,Meat/Poultry,26,97.0,0.1,2269.8
+10269,2023-08-07,2023-08-16,EMEA,AROUT,Around the Horn,UK,1,Nancy,Davolio,15,Genen Shouyu,Condiments,22,15.5,0.15,289.85
+10270,2023-08-11,2023-08-14,EMEA,BERGS,Berglunds snabbköp,Sweden,9,Anne,Dodsworth,2,Chang,Beverages,17,19.0,0.2,258.4
+10270,2023-08-11,2023-08-14,EMEA,BERGS,Berglunds snabbköp,Sweden,9,Anne,Dodsworth,20,Sir Rodney's Marmalade,Confections,17,81.0,0.0,1377.0
+10270,2023-08-11,2023-08-14,EMEA,BERGS,Berglunds snabbköp,Sweden,9,Anne,Dodsworth,16,Pavlova,Confections,2,17.45,0.1,31.41
+10271,2023-03-24,2023-03-29,EMEA,BERGS,Berglunds snabbköp,Sweden,2,Andrew,Fuller,8,Northwoods Cranberry Sauce,Condiments,13,40.0,0.0,520.0
+10272,2024-08-06,2024-08-12,EMEA,BERGS,Berglunds snabbköp,Sweden,1,Nancy,Davolio,14,Tofu,Produce,22,23.25,0.1,460.35
+10273,2024-08-01,2024-08-12,EMEA,BERGS,Berglunds snabbköp,Sweden,6,Michael,Suyama,11,Queso Cabrales,Dairy Products,9,21.0,0.05,179.55
+10273,2024-08-01,2024-08-12,EMEA,BERGS,Berglunds snabbköp,Sweden,6,Michael,Suyama,8,Northwoods Cranberry Sauce,Condiments,5,40.0,0.15,170.0
+10274,2024-10-22,2024-10-29,EMEA,BERGS,Berglunds snabbköp,Sweden,8,Laura,Callahan,1,Chai,Beverages,15,18.0,0.1,243.0
+10275,2024-07-30,2024-08-03,EMEA,BERGS,Berglunds snabbköp,Sweden,2,Andrew,Fuller,17,Alice Mutton,Meat/Poultry,5,39.0,0.0,195.0
+10275,2024-07-30,2024-08-03,EMEA,BERGS,Berglunds snabbköp,Sweden,2,Andrew,Fuller,9,Mishi Kobe Niku,Meat/Poultry,29,97.0,0.0,2813.0
+10276,2023-09-08,2023-09-16,EMEA,BERGS,Berglunds snabbköp,Sweden,5,Steven,Buchanan,18,Carnarvon Tigers,Seafood,22,62.5,0.2,1100.0
+10276,2023-09-08,2023-09-16,EMEA,BERGS,Berglunds snabbköp,Sweden,5,Steven,Buchanan,10,Ikura,Seafood,18,31.0,0.0,558.0
+10276,2023-09-08,2023-09-16,EMEA,BERGS,Berglunds snabbköp,Sweden,5,Steven,Buchanan,17,Alice Mutton,Meat/Poultry,30,39.0,0.15,994.5
+10276,2023-09-08,2023-09-16,EMEA,BERGS,Berglunds snabbköp,Sweden,5,Steven,Buchanan,1,Chai,Beverages,4,18.0,0.0,72.0
+10277,2023-09-28,2023-10-02,EMEA,BERGS,Berglunds snabbköp,Sweden,2,Andrew,Fuller,9,Mishi Kobe Niku,Meat/Poultry,20,97.0,0.0,1940.0
+10277,2023-09-28,2023-10-02,EMEA,BERGS,Berglunds snabbköp,Sweden,2,Andrew,Fuller,10,Ikura,Seafood,23,31.0,0.0,713.0
+10278,2023-07-28,2023-08-04,EMEA,BERGS,Berglunds snabbköp,Sweden,9,Anne,Dodsworth,2,Chang,Beverages,27,19.0,0.0,513.0
+10278,2023-07-28,2023-08-04,EMEA,BERGS,Berglunds snabbköp,Sweden,9,Anne,Dodsworth,3,Aniseed Syrup,Condiments,2,10.0,0.0,20.0
+10278,2023-07-28,2023-08-04,EMEA,BERGS,Berglunds snabbköp,Sweden,9,Anne,Dodsworth,14,Tofu,Produce,11,23.25,0.2,204.6
+10279,2023-05-14,2023-05-21,EMEA,BERGS,Berglunds snabbköp,Sweden,3,Janet,Leverling,18,Carnarvon Tigers,Seafood,4,62.5,0.0,250.0
+10279,2023-05-14,2023-05-21,EMEA,BERGS,Berglunds snabbköp,Sweden,3,Janet,Leverling,14,Tofu,Produce,29,23.25,0.15,573.11
+10279,2023-05-14,2023-05-21,EMEA,BERGS,Berglunds snabbköp,Sweden,3,Janet,Leverling,20,Sir Rodney's Marmalade,Confections,29,81.0,0.0,2349.0
+10279,2023-05-14,2023-05-21,EMEA,BERGS,Berglunds snabbköp,Sweden,3,Janet,Leverling,1,Chai,Beverages,18,18.0,0.0,324.0
+10280,2023-01-11,2023-01-18,EMEA,BLAUS,Blauer See Delikatessen,Germany,6,Michael,Suyama,7,Uncle Bob's Organic Dried Pears,Produce,12,30.0,0.2,288.0
+10280,2023-01-11,2023-01-18,EMEA,BLAUS,Blauer See Delikatessen,Germany,6,Michael,Suyama,8,Northwoods Cranberry Sauce,Condiments,18,40.0,0.2,576.0
+10280,2023-01-11,2023-01-18,EMEA,BLAUS,Blauer See Delikatessen,Germany,6,Michael,Suyama,4,Chef Anton's Cajun Seasoning,Condiments,14,22.0,0.1,277.2
+10281,2023-07-11,2023-07-16,EMEA,BLAUS,Blauer See Delikatessen,Germany,4,Margaret,Peacock,14,Tofu,Produce,6,23.25,0.15,118.58
+10281,2023-07-11,2023-07-16,EMEA,BLAUS,Blauer See Delikatessen,Germany,4,Margaret,Peacock,1,Chai,Beverages,30,18.0,0.0,540.0
+10282,2023-07-20,2023-07-29,EMEA,BLAUS,Blauer See Delikatessen,Germany,4,Margaret,Peacock,4,Chef Anton's Cajun Seasoning,Condiments,28,22.0,0.0,616.0
+10282,2023-07-20,2023-07-29,EMEA,BLAUS,Blauer See Delikatessen,Germany,4,Margaret,Peacock,13,Konbu,Seafood,28,6.0,0.05,159.6
+10283,2023-06-06,2023-06-12,EMEA,BLONP,Blondesddsl père et fils,France,4,Margaret,Peacock,13,Konbu,Seafood,9,6.0,0.2,43.2
+10283,2023-06-06,2023-06-12,EMEA,BLONP,Blondesddsl père et fils,France,4,Margaret,Peacock,11,Queso Cabrales,Dairy Products,3,21.0,0.2,50.4
+10284,2023-05-23,2023-05-31,EMEA,BLONP,Blondesddsl père et fils,France,9,Anne,Dodsworth,1,Chai,Beverages,6,18.0,0.1,97.2
+10284,2023-05-23,2023-05-31,EMEA,BLONP,Blondesddsl père et fils,France,9,Anne,Dodsworth,4,Chef Anton's Cajun Seasoning,Condiments,9,22.0,0.0,198.0
+10284,2023-05-23,2023-05-31,EMEA,BLONP,Blondesddsl père et fils,France,9,Anne,Dodsworth,9,Mishi Kobe Niku,Meat/Poultry,4,97.0,0.1,349.2
+10285,2023-08-11,2023-08-19,EMEA,BLONP,Blondesddsl père et fils,France,6,Michael,Suyama,13,Konbu,Seafood,29,6.0,0.1,156.6
+10286,2023-04-08,2023-04-15,EMEA,BLONP,Blondesddsl père et fils,France,1,Nancy,Davolio,1,Chai,Beverages,12,18.0,0.05,205.2
+10286,2023-04-08,2023-04-15,EMEA,BLONP,Blondesddsl père et fils,France,1,Nancy,Davolio,17,Alice Mutton,Meat/Poultry,3,39.0,0.15,99.45
+10286,2023-04-08,2023-04-15,EMEA,BLONP,Blondesddsl père et fils,France,1,Nancy,Davolio,18,Carnarvon Tigers,Seafood,30,62.5,0.0,1875.0
+10286,2023-04-08,2023-04-15,EMEA,BLONP,Blondesddsl père et fils,France,1,Nancy,Davolio,7,Uncle Bob's Organic Dried Pears,Produce,20,30.0,0.0,600.0
+10287,2023-12-06,2023-12-10,EMEA,BLONP,Blondesddsl père et fils,France,5,Steven,Buchanan,14,Tofu,Produce,23,23.25,0.0,534.75
+10287,2023-12-06,2023-12-10,EMEA,BLONP,Blondesddsl père et fils,France,5,Steven,Buchanan,11,Queso Cabrales,Dairy Products,18,21.0,0.0,378.0
+10287,2023-12-06,2023-12-10,EMEA,BLONP,Blondesddsl père et fils,France,5,Steven,Buchanan,13,Konbu,Seafood,7,6.0,0.05,39.9
+10288,2024-11-08,2024-11-17,EMEA,BOLID,Bólido Comidas preparadas,Spain,9,Anne,Dodsworth,10,Ikura,Seafood,26,31.0,0.1,725.4
+10288,2024-11-08,2024-11-17,EMEA,BOLID,Bólido Comidas preparadas,Spain,9,Anne,Dodsworth,7,Uncle Bob's Organic Dried Pears,Produce,20,30.0,0.15,510.0
+10288,2024-11-08,2024-11-17,EMEA,BOLID,Bólido Comidas preparadas,Spain,9,Anne,Dodsworth,14,Tofu,Produce,11,23.25,0.05,242.96
+10289,2024-12-14,2024-12-24,EMEA,BOLID,Bólido Comidas preparadas,Spain,4,Margaret,Peacock,6,Grandma's Boysenberry Spread,Condiments,22,25.0,0.15,467.5
+10289,2024-12-14,2024-12-24,EMEA,BOLID,Bólido Comidas preparadas,Spain,4,Margaret,Peacock,3,Aniseed Syrup,Condiments,20,10.0,0.0,200.0
+10289,2024-12-14,2024-12-24,EMEA,BOLID,Bólido Comidas preparadas,Spain,4,Margaret,Peacock,10,Ikura,Seafood,3,31.0,0.2,74.4
+10289,2024-12-14,2024-12-24,EMEA,BOLID,Bólido Comidas preparadas,Spain,4,Margaret,Peacock,17,Alice Mutton,Meat/Poultry,25,39.0,0.0,975.0
+10290,2023-07-23,2023-07-28,EMEA,BONAP,Bon app',France,1,Nancy,Davolio,16,Pavlova,Confections,15,17.45,0.05,248.66
+10290,2023-07-23,2023-07-28,EMEA,BONAP,Bon app',France,1,Nancy,Davolio,3,Aniseed Syrup,Condiments,29,10.0,0.15,246.5
+10291,2024-08-12,2024-08-18,EMEA,BONAP,Bon app',France,7,Robert,King,8,Northwoods Cranberry Sauce,Condiments,25,40.0,0.05,950.0
+10291,2024-08-12,2024-08-18,EMEA,BONAP,Bon app',France,7,Robert,King,5,Chef Anton's Gumbo Mix,Condiments,8,21.35,0.0,170.8
+10291,2024-08-12,2024-08-18,EMEA,BONAP,Bon app',France,7,Robert,King,1,Chai,Beverages,26,18.0,0.15,397.8
+10291,2024-08-12,2024-08-18,EMEA,BONAP,Bon app',France,7,Robert,King,4,Chef Anton's Cajun Seasoning,Condiments,17,22.0,0.05,355.3
+10292,2023-02-21,2023-03-04,EMEA,BONAP,Bon app',France,4,Margaret,Peacock,5,Chef Anton's Gumbo Mix,Condiments,25,21.35,0.05,507.06
+10292,2023-02-21,2023-03-04,EMEA,BONAP,Bon app',France,4,Margaret,Peacock,15,Genen Shouyu,Condiments,20,15.5,0.2,248.0
+10292,2023-02-21,2023-03-04,EMEA,BONAP,Bon app',France,4,Margaret,Peacock,17,Alice Mutton,Meat/Poultry,24,39.0,0.1,842.4
+10292,2023-02-21,2023-03-04,EMEA,BONAP,Bon app',France,4,Margaret,Peacock,11,Queso Cabrales,Dairy Products,14,21.0,0.2,235.2
+10293,2024-07-15,2024-07-25,EMEA,BONAP,Bon app',France,3,Janet,Leverling,15,Genen Shouyu,Condiments,25,15.5,0.2,310.0
+10293,2024-07-15,2024-07-25,EMEA,BONAP,Bon app',France,3,Janet,Leverling,9,Mishi Kobe Niku,Meat/Poultry,17,97.0,0.05,1566.55
+10293,2024-07-15,2024-07-25,EMEA,BONAP,Bon app',France,3,Janet,Leverling,8,Northwoods Cranberry Sauce,Condiments,21,40.0,0.0,840.0
+10293,2024-07-15,2024-07-25,EMEA,BONAP,Bon app',France,3,Janet,Leverling,19,Teatime Chocolate Biscuits,Confections,9,9.2,0.05,78.66
+10294,2023-03-21,2023-03-28,EMEA,BONAP,Bon app',France,4,Margaret,Peacock,11,Queso Cabrales,Dairy Products,5,21.0,0.0,105.0
+10294,2023-03-21,2023-03-28,EMEA,BONAP,Bon app',France,4,Margaret,Peacock,18,Carnarvon Tigers,Seafood,8,62.5,0.05,475.0
+10294,2023-03-21,2023-03-28,EMEA,BONAP,Bon app',France,4,Margaret,Peacock,3,Aniseed Syrup,Condiments,23,10.0,0.0,230.0
+10295,2024-12-24,2024-12-30,EMEA,BONAP,Bon app',France,2,Andrew,Fuller,11,Queso Cabrales,Dairy Products,2,21.0,0.0,42.0
+10295,2024-12-24,2024-12-30,EMEA,BONAP,Bon app',France,2,Andrew,Fuller,18,Carnarvon Tigers,Seafood,27,62.5,0.05,1603.13
+10295,2024-12-24,2024-12-30,EMEA,BONAP,Bon app',France,2,Andrew,Fuller,15,Genen Shouyu,Condiments,13,15.5,0.2,161.2
+10295,2024-12-24,2024-12-30,EMEA,BONAP,Bon app',France,2,Andrew,Fuller,14,Tofu,Produce,19,23.25,0.15,375.49
+10296,2023-01-21,2023-02-02,EMEA,BONAP,Bon app',France,7,Robert,King,12,Queso Manchego La Pastora,Dairy Products,10,38.0,0.2,304.0
+10297,2024-02-04,2024-02-13,EMEA,BONAP,Bon app',France,9,Anne,Dodsworth,16,Pavlova,Confections,9,17.45,0.05,149.2
+10297,2024-02-04,2024-02-13,EMEA,BONAP,Bon app',France,9,Anne,Dodsworth,8,Northwoods Cranberry Sauce,Condiments,16,40.0,0.0,640.0
+10298,2024-02-03,2024-02-11,EMEA,BONAP,Bon app',France,7,Robert,King,15,Genen Shouyu,Condiments,20,15.5,0.1,279.0
+10298,2024-02-03,2024-02-11,EMEA,BONAP,Bon app',France,7,Robert,King,5,Chef Anton's Gumbo Mix,Condiments,1,21.35,0.05,20.28
+10299,2024-08-29,2024-09-10,EMEA,BONAP,Bon app',France,1,Nancy,Davolio,5,Chef Anton's Gumbo Mix,Condiments,9,21.35,0.05,182.54
+10299,2024-08-29,2024-09-10,EMEA,BONAP,Bon app',France,1,Nancy,Davolio,15,Genen Shouyu,Condiments,11,15.5,0.0,170.5
+10299,2024-08-29,2024-09-10,EMEA,BONAP,Bon app',France,1,Nancy,Davolio,6,Grandma's Boysenberry Spread,Condiments,15,25.0,0.0,375.0
+10299,2024-08-29,2024-09-10,EMEA,BONAP,Bon app',France,1,Nancy,Davolio,2,Chang,Beverages,11,19.0,0.2,167.2
+10300,2024-01-24,2024-01-31,EMEA,BONAP,Bon app',France,7,Robert,King,16,Pavlova,Confections,1,17.45,0.15,14.83
+10301,2024-07-06,2024-07-09,EMEA,BONAP,Bon app',France,6,Michael,Suyama,2,Chang,Beverages,25,19.0,0.0,475.0
+10302,2023-09-11,2023-09-17,EMEA,BONAP,Bon app',France,1,Nancy,Davolio,8,Northwoods Cranberry Sauce,Condiments,16,40.0,0.15,544.0
+10302,2023-09-11,2023-09-17,EMEA,BONAP,Bon app',France,1,Nancy,Davolio,5,Chef Anton's Gumbo Mix,Condiments,4,21.35,0.1,76.86
+10303,2023-08-12,2023-08-22,EMEA,BONAP,Bon app',France,5,Steven,Buchanan,20,Sir Rodney's Marmalade,Confections,25,81.0,0.2,1620.0
+10303,2023-08-12,2023-08-22,EMEA,BONAP,Bon app',France,5,Steven,Buchanan,4,Chef Anton's Cajun Seasoning,Condiments,6,22.0,0.0,132.0
+10304,2024-11-24,2024-12-03,AMER,BOTTM,Bottom-Dollar Markets,Canada,7,Robert,King,3,Aniseed Syrup,Condiments,23,10.0,0.2,184.0
+10304,2024-11-24,2024-12-03,AMER,BOTTM,Bottom-Dollar Markets,Canada,7,Robert,King,19,Teatime Chocolate Biscuits,Confections,21,9.2,0.0,193.2
+10305,2023-04-15,2023-04-22,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,12,Queso Manchego La Pastora,Dairy Products,18,38.0,0.05,649.8
+10306,2024-11-08,2024-11-16,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,1,Chai,Beverages,4,18.0,0.05,68.4
+10306,2024-11-08,2024-11-16,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,14,Tofu,Produce,12,23.25,0.15,237.15
+10306,2024-11-08,2024-11-16,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,16,Pavlova,Confections,29,17.45,0.2,404.84
+10307,2024-04-15,2024-04-20,AMER,BOTTM,Bottom-Dollar Markets,Canada,7,Robert,King,20,Sir Rodney's Marmalade,Confections,15,81.0,0.05,1154.25
+10307,2024-04-15,2024-04-20,AMER,BOTTM,Bottom-Dollar Markets,Canada,7,Robert,King,18,Carnarvon Tigers,Seafood,27,62.5,0.15,1434.38
+10307,2024-04-15,2024-04-20,AMER,BOTTM,Bottom-Dollar Markets,Canada,7,Robert,King,16,Pavlova,Confections,19,17.45,0.0,331.55
+10308,2023-11-27,2023-12-03,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,8,Northwoods Cranberry Sauce,Condiments,1,40.0,0.05,38.0
+10308,2023-11-27,2023-12-03,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,15,Genen Shouyu,Condiments,28,15.5,0.0,434.0
+10308,2023-11-27,2023-12-03,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,13,Konbu,Seafood,6,6.0,0.05,34.2
+10308,2023-11-27,2023-12-03,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,11,Queso Cabrales,Dairy Products,7,21.0,0.0,147.0
+10309,2023-09-22,2023-09-30,AMER,BOTTM,Bottom-Dollar Markets,Canada,5,Steven,Buchanan,18,Carnarvon Tigers,Seafood,7,62.5,0.0,437.5
+10309,2023-09-22,2023-09-30,AMER,BOTTM,Bottom-Dollar Markets,Canada,5,Steven,Buchanan,1,Chai,Beverages,8,18.0,0.15,122.4
+10309,2023-09-22,2023-09-30,AMER,BOTTM,Bottom-Dollar Markets,Canada,5,Steven,Buchanan,17,Alice Mutton,Meat/Poultry,14,39.0,0.05,518.7
+10310,2024-07-22,2024-07-28,AMER,BOTTM,Bottom-Dollar Markets,Canada,8,Laura,Callahan,15,Genen Shouyu,Condiments,8,15.5,0.05,117.8
+10310,2024-07-22,2024-07-28,AMER,BOTTM,Bottom-Dollar Markets,Canada,8,Laura,Callahan,1,Chai,Beverages,23,18.0,0.0,414.0
+10310,2024-07-22,2024-07-28,AMER,BOTTM,Bottom-Dollar Markets,Canada,8,Laura,Callahan,3,Aniseed Syrup,Condiments,10,10.0,0.15,85.0
+10310,2024-07-22,2024-07-28,AMER,BOTTM,Bottom-Dollar Markets,Canada,8,Laura,Callahan,10,Ikura,Seafood,19,31.0,0.0,589.0
+10311,2024-04-29,2024-05-10,AMER,BOTTM,Bottom-Dollar Markets,Canada,9,Anne,Dodsworth,18,Carnarvon Tigers,Seafood,9,62.5,0.0,562.5
+10311,2024-04-29,2024-05-10,AMER,BOTTM,Bottom-Dollar Markets,Canada,9,Anne,Dodsworth,11,Queso Cabrales,Dairy Products,9,21.0,0.0,189.0
+10311,2024-04-29,2024-05-10,AMER,BOTTM,Bottom-Dollar Markets,Canada,9,Anne,Dodsworth,12,Queso Manchego La Pastora,Dairy Products,4,38.0,0.15,129.2
+10311,2024-04-29,2024-05-10,AMER,BOTTM,Bottom-Dollar Markets,Canada,9,Anne,Dodsworth,15,Genen Shouyu,Condiments,7,15.5,0.0,108.5
+10312,2023-05-03,2023-05-14,AMER,BOTTM,Bottom-Dollar Markets,Canada,3,Janet,Leverling,16,Pavlova,Confections,24,17.45,0.1,376.92
+10312,2023-05-03,2023-05-14,AMER,BOTTM,Bottom-Dollar Markets,Canada,3,Janet,Leverling,9,Mishi Kobe Niku,Meat/Poultry,25,97.0,0.1,2182.5
+10313,2024-09-03,2024-09-10,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,8,Northwoods Cranberry Sauce,Condiments,10,40.0,0.0,400.0
+10313,2024-09-03,2024-09-10,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,12,Queso Manchego La Pastora,Dairy Products,23,38.0,0.1,786.6
+10313,2024-09-03,2024-09-10,AMER,BOTTM,Bottom-Dollar Markets,Canada,2,Andrew,Fuller,6,Grandma's Boysenberry Spread,Condiments,5,25.0,0.0,125.0
+10314,2023-02-16,2023-02-19,AMER,BOTTM,Bottom-Dollar Markets,Canada,9,Anne,Dodsworth,16,Pavlova,Confections,28,17.45,0.0,488.6
+10314,2023-02-16,2023-02-19,AMER,BOTTM,Bottom-Dollar Markets,Canada,9,Anne,Dodsworth,4,Chef Anton's Cajun Seasoning,Condiments,19,22.0,0.0,418.0
+10315,2024-04-25,2024-05-05,AMER,BOTTM,Bottom-Dollar Markets,Canada,8,Laura,Callahan,2,Chang,Beverages,28,19.0,0.05,505.4
+10315,2024-04-25,2024-05-05,AMER,BOTTM,Bottom-Dollar Markets,Canada,8,Laura,Callahan,9,Mishi Kobe Niku,Meat/Poultry,4,97.0,0.2,310.4
+10316,2023-05-28,2023-05-31,EMEA,BSBEV,B's Beverages,UK,3,Janet,Leverling,3,Aniseed Syrup,Condiments,18,10.0,0.2,144.0
+10316,2023-05-28,2023-05-31,EMEA,BSBEV,B's Beverages,UK,3,Janet,Leverling,8,Northwoods Cranberry Sauce,Condiments,14,40.0,0.1,504.0
+10316,2023-05-28,2023-05-31,EMEA,BSBEV,B's Beverages,UK,3,Janet,Leverling,4,Chef Anton's Cajun Seasoning,Condiments,20,22.0,0.2,352.0
+10317,2023-06-08,2023-06-14,EMEA,BSBEV,B's Beverages,UK,9,Anne,Dodsworth,15,Genen Shouyu,Condiments,19,15.5,0.1,265.05
+10317,2023-06-08,2023-06-14,EMEA,BSBEV,B's Beverages,UK,9,Anne,Dodsworth,10,Ikura,Seafood,2,31.0,0.1,55.8
+10317,2023-06-08,2023-06-14,EMEA,BSBEV,B's Beverages,UK,9,Anne,Dodsworth,14,Tofu,Produce,24,23.25,0.0,558.0
+10317,2023-06-08,2023-06-14,EMEA,BSBEV,B's Beverages,UK,9,Anne,Dodsworth,19,Teatime Chocolate Biscuits,Confections,25,9.2,0.0,230.0
+10318,2023-02-11,2023-02-16,AMER,CACTU,Cactus Comidas para llevar,Argentina,4,Margaret,Peacock,6,Grandma's Boysenberry Spread,Condiments,1,25.0,0.05,23.75
+10319,2023-08-19,2023-08-31,AMER,CACTU,Cactus Comidas para llevar,Argentina,8,Laura,Callahan,8,Northwoods Cranberry Sauce,Condiments,10,40.0,0.15,340.0
+10320,2023-05-25,2023-06-04,AMER,CACTU,Cactus Comidas para llevar,Argentina,2,Andrew,Fuller,9,Mishi Kobe Niku,Meat/Poultry,22,97.0,0.2,1707.2
+10320,2023-05-25,2023-06-04,AMER,CACTU,Cactus Comidas para llevar,Argentina,2,Andrew,Fuller,19,Teatime Chocolate Biscuits,Confections,30,9.2,0.0,276.0
+10321,2023-08-06,2023-08-10,AMER,CACTU,Cactus Comidas para llevar,Argentina,9,Anne,Dodsworth,9,Mishi Kobe Niku,Meat/Poultry,3,97.0,0.0,291.0
+10321,2023-08-06,2023-08-10,AMER,CACTU,Cactus Comidas para llevar,Argentina,9,Anne,Dodsworth,5,Chef Anton's Gumbo Mix,Condiments,6,21.35,0.2,102.48
+10322,2023-06-07,2023-06-19,AMER,CACTU,Cactus Comidas para llevar,Argentina,5,Steven,Buchanan,15,Genen Shouyu,Condiments,23,15.5,0.0,356.5
+10323,2024-12-27,2025-01-06,AMER,CENTC,Centro comercial Moctezuma,Mexico,2,Andrew,Fuller,14,Tofu,Produce,24,23.25,0.0,558.0
+10324,2024-10-26,2024-10-29,AMER,CENTC,Centro comercial Moctezuma,Mexico,2,Andrew,Fuller,9,Mishi Kobe Niku,Meat/Poultry,19,97.0,0.0,1843.0
+10325,2024-10-06,2024-10-16,AMER,CENTC,Centro comercial Moctezuma,Mexico,9,Anne,Dodsworth,9,Mishi Kobe Niku,Meat/Poultry,3,97.0,0.05,276.45
+10325,2024-10-06,2024-10-16,AMER,CENTC,Centro comercial Moctezuma,Mexico,9,Anne,Dodsworth,6,Grandma's Boysenberry Spread,Condiments,12,25.0,0.05,285.0
+10325,2024-10-06,2024-10-16,AMER,CENTC,Centro comercial Moctezuma,Mexico,9,Anne,Dodsworth,14,Tofu,Produce,11,23.25,0.0,255.75
+10325,2024-10-06,2024-10-16,AMER,CENTC,Centro comercial Moctezuma,Mexico,9,Anne,Dodsworth,16,Pavlova,Confections,22,17.45,0.0,383.9
+10326,2024-05-22,2024-05-29,EMEA,CHOPS,Chop-suey Chinese,Switzerland,7,Robert,King,15,Genen Shouyu,Condiments,3,15.5,0.0,46.5
+10327,2023-09-16,2023-09-24,EMEA,CHOPS,Chop-suey Chinese,Switzerland,2,Andrew,Fuller,18,Carnarvon Tigers,Seafood,15,62.5,0.05,890.63
+10328,2023-02-25,2023-03-03,EMEA,CHOPS,Chop-suey Chinese,Switzerland,9,Anne,Dodsworth,15,Genen Shouyu,Condiments,18,15.5,0.0,279.0
+10328,2023-02-25,2023-03-03,EMEA,CHOPS,Chop-suey Chinese,Switzerland,9,Anne,Dodsworth,2,Chang,Beverages,30,19.0,0.0,570.0
+10328,2023-02-25,2023-03-03,EMEA,CHOPS,Chop-suey Chinese,Switzerland,9,Anne,Dodsworth,7,Uncle Bob's Organic Dried Pears,Produce,15,30.0,0.15,382.5
+10328,2023-02-25,2023-03-03,EMEA,CHOPS,Chop-suey Chinese,Switzerland,9,Anne,Dodsworth,9,Mishi Kobe Niku,Meat/Poultry,16,97.0,0.0,1552.0
+10329,2023-01-30,2023-02-11,EMEA,CHOPS,Chop-suey Chinese,Switzerland,4,Margaret,Peacock,10,Ikura,Seafood,1,31.0,0.1,27.9
+10329,2023-01-30,2023-02-11,EMEA,CHOPS,Chop-suey Chinese,Switzerland,4,Margaret,Peacock,18,Carnarvon Tigers,Seafood,14,62.5,0.0,875.0
+10330,2023-08-19,2023-08-23,EMEA,CHOPS,Chop-suey Chinese,Switzerland,8,Laura,Callahan,16,Pavlova,Confections,17,17.45,0.15,252.15
+10330,2023-08-19,2023-08-23,EMEA,CHOPS,Chop-suey Chinese,Switzerland,8,Laura,Callahan,10,Ikura,Seafood,9,31.0,0.05,265.05
+10331,2024-05-09,2024-05-19,EMEA,CHOPS,Chop-suey Chinese,Switzerland,4,Margaret,Peacock,13,Konbu,Seafood,30,6.0,0.1,162.0
+10331,2024-05-09,2024-05-19,EMEA,CHOPS,Chop-suey Chinese,Switzerland,4,Margaret,Peacock,7,Uncle Bob's Organic Dried Pears,Produce,17,30.0,0.15,433.5
+10332,2023-05-20,2023-05-24,EMEA,CHOPS,Chop-suey Chinese,Switzerland,5,Steven,Buchanan,17,Alice Mutton,Meat/Poultry,10,39.0,0.15,331.5
+10332,2023-05-20,2023-05-24,EMEA,CHOPS,Chop-suey Chinese,Switzerland,5,Steven,Buchanan,9,Mishi Kobe Niku,Meat/Poultry,10,97.0,0.2,776.0
+10332,2023-05-20,2023-05-24,EMEA,CHOPS,Chop-suey Chinese,Switzerland,5,Steven,Buchanan,1,Chai,Beverages,19,18.0,0.1,307.8
+10333,2024-11-06,2024-11-16,EMEA,CHOPS,Chop-suey Chinese,Switzerland,3,Janet,Leverling,12,Queso Manchego La Pastora,Dairy Products,15,38.0,0.0,570.0
+10333,2024-11-06,2024-11-16,EMEA,CHOPS,Chop-suey Chinese,Switzerland,3,Janet,Leverling,11,Queso Cabrales,Dairy Products,28,21.0,0.0,588.0
+10333,2024-11-06,2024-11-16,EMEA,CHOPS,Chop-suey Chinese,Switzerland,3,Janet,Leverling,18,Carnarvon Tigers,Seafood,23,62.5,0.0,1437.5
+10333,2024-11-06,2024-11-16,EMEA,CHOPS,Chop-suey Chinese,Switzerland,3,Janet,Leverling,13,Konbu,Seafood,19,6.0,0.05,108.3
+10334,2023-08-28,2023-09-06,EMEA,CHOPS,Chop-suey Chinese,Switzerland,1,Nancy,Davolio,13,Konbu,Seafood,2,6.0,0.0,12.0
+10334,2023-08-28,2023-09-06,EMEA,CHOPS,Chop-suey Chinese,Switzerland,1,Nancy,Davolio,20,Sir Rodney's Marmalade,Confections,17,81.0,0.1,1239.3
+10334,2023-08-28,2023-09-06,EMEA,CHOPS,Chop-suey Chinese,Switzerland,1,Nancy,Davolio,5,Chef Anton's Gumbo Mix,Condiments,11,21.35,0.2,187.88
+10334,2023-08-28,2023-09-06,EMEA,CHOPS,Chop-suey Chinese,Switzerland,1,Nancy,Davolio,16,Pavlova,Confections,4,17.45,0.2,55.84
+10335,2024-03-26,2024-03-30,EMEA,CHOPS,Chop-suey Chinese,Switzerland,9,Anne,Dodsworth,5,Chef Anton's Gumbo Mix,Condiments,14,21.35,0.2,239.12
+10336,2024-11-01,2024-11-06,EMEA,CHOPS,Chop-suey Chinese,Switzerland,2,Andrew,Fuller,11,Queso Cabrales,Dairy Products,28,21.0,0.0,588.0
+10336,2024-11-01,2024-11-06,EMEA,CHOPS,Chop-suey Chinese,Switzerland,2,Andrew,Fuller,13,Konbu,Seafood,28,6.0,0.15,142.8
+10336,2024-11-01,2024-11-06,EMEA,CHOPS,Chop-suey Chinese,Switzerland,2,Andrew,Fuller,3,Aniseed Syrup,Condiments,28,10.0,0.1,252.0
+10337,2024-01-25,2024-02-02,EMEA,CHOPS,Chop-suey Chinese,Switzerland,8,Laura,Callahan,20,Sir Rodney's Marmalade,Confections,3,81.0,0.0,243.0
+10338,2024-10-08,2024-10-15,EMEA,CHOPS,Chop-suey Chinese,Switzerland,4,Margaret,Peacock,14,Tofu,Produce,4,23.25,0.2,74.4
+10339,2024-12-11,2024-12-18,AMER,COMMI,Comércio Mineiro,Brazil,1,Nancy,Davolio,2,Chang,Beverages,12,19.0,0.05,216.6
+10339,2024-12-11,2024-12-18,AMER,COMMI,Comércio Mineiro,Brazil,1,Nancy,Davolio,10,Ikura,Seafood,5,31.0,0.0,155.0
+10339,2024-12-11,2024-12-18,AMER,COMMI,Comércio Mineiro,Brazil,1,Nancy,Davolio,12,Queso Manchego La Pastora,Dairy Products,17,38.0,0.05,613.7
+10340,2024-08-02,2024-08-07,AMER,COMMI,Comércio Mineiro,Brazil,3,Janet,Leverling,20,Sir Rodney's Marmalade,Confections,28,81.0,0.05,2154.6
+10341,2024-09-26,2024-10-02,AMER,COMMI,Comércio Mineiro,Brazil,8,Laura,Callahan,8,Northwoods Cranberry Sauce,Condiments,21,40.0,0.0,840.0
+10341,2024-09-26,2024-10-02,AMER,COMMI,Comércio Mineiro,Brazil,8,Laura,Callahan,15,Genen Shouyu,Condiments,15,15.5,0.0,232.5
+10342,2024-11-13,2024-11-16,AMER,COMMI,Comércio Mineiro,Brazil,8,Laura,Callahan,3,Aniseed Syrup,Condiments,12,10.0,0.1,108.0
+10342,2024-11-13,2024-11-16,AMER,COMMI,Comércio Mineiro,Brazil,8,Laura,Callahan,15,Genen Shouyu,Condiments,10,15.5,0.15,131.75
+10343,2024-03-10,2024-03-17,AMER,COMMI,Comércio Mineiro,Brazil,8,Laura,Callahan,13,Konbu,Seafood,4,6.0,0.0,24.0
+10343,2024-03-10,2024-03-17,AMER,COMMI,Comércio Mineiro,Brazil,8,Laura,Callahan,16,Pavlova,Confections,13,17.45,0.1,204.17
+10344,2024-01-03,2024-01-15,AMER,COMMI,Comércio Mineiro,Brazil,5,Steven,Buchanan,1,Chai,Beverages,1,18.0,0.1,16.2
+10344,2024-01-03,2024-01-15,AMER,COMMI,Comércio Mineiro,Brazil,5,Steven,Buchanan,13,Konbu,Seafood,28,6.0,0.15,142.8
+10344,2024-01-03,2024-01-15,AMER,COMMI,Comércio Mineiro,Brazil,5,Steven,Buchanan,9,Mishi Kobe Niku,Meat/Poultry,25,97.0,0.15,2061.25
+10345,2023-02-20,2023-03-04,AMER,COMMI,Comércio Mineiro,Brazil,8,Laura,Callahan,20,Sir Rodney's Marmalade,Confections,8,81.0,0.15,550.8
+10345,2023-02-20,2023-03-04,AMER,COMMI,Comércio Mineiro,Brazil,8,Laura,Callahan,12,Queso Manchego La Pastora,Dairy Products,7,38.0,0.1,239.4
+10346,2023-09-14,2023-09-19,AMER,COMMI,Comércio Mineiro,Brazil,2,Andrew,Fuller,10,Ikura,Seafood,26,31.0,0.05,765.7
+10347,2023-02-04,2023-02-16,AMER,COMMI,Comércio Mineiro,Brazil,6,Michael,Suyama,3,Aniseed Syrup,Condiments,11,10.0,0.15,93.5
+10347,2023-02-04,2023-02-16,AMER,COMMI,Comércio Mineiro,Brazil,6,Michael,Suyama,10,Ikura,Seafood,14,31.0,0.0,434.0
+10348,2023-05-09,2023-05-16,EMEA,CONSH,Consolidated Holdings,UK,3,Janet,Leverling,10,Ikura,Seafood,3,31.0,0.0,93.0
+10348,2023-05-09,2023-05-16,EMEA,CONSH,Consolidated Holdings,UK,3,Janet,Leverling,11,Queso Cabrales,Dairy Products,25,21.0,0.0,525.0
+10348,2023-05-09,2023-05-16,EMEA,CONSH,Consolidated Holdings,UK,3,Janet,Leverling,4,Chef Anton's Cajun Seasoning,Condiments,28,22.0,0.15,523.6
+10348,2023-05-09,2023-05-16,EMEA,CONSH,Consolidated Holdings,UK,3,Janet,Leverling,15,Genen Shouyu,Condiments,24,15.5,0.15,316.2
+10349,2023-04-12,2023-04-23,EMEA,CONSH,Consolidated Holdings,UK,6,Michael,Suyama,1,Chai,Beverages,15,18.0,0.0,270.0
+10349,2023-04-12,2023-04-23,EMEA,CONSH,Consolidated Holdings,UK,6,Michael,Suyama,9,Mishi Kobe Niku,Meat/Poultry,22,97.0,0.15,1813.9
+10349,2023-04-12,2023-04-23,EMEA,CONSH,Consolidated Holdings,UK,6,Michael,Suyama,18,Carnarvon Tigers,Seafood,22,62.5,0.0,1375.0
+10349,2023-04-12,2023-04-23,EMEA,CONSH,Consolidated Holdings,UK,6,Michael,Suyama,4,Chef Anton's Cajun Seasoning,Condiments,19,22.0,0.05,397.1
+10350,2023-04-30,2023-05-10,EMEA,DRACD,Drachenblut Delikatessen,Germany,1,Nancy,Davolio,20,Sir Rodney's Marmalade,Confections,21,81.0,0.2,1360.8
+10350,2023-04-30,2023-05-10,EMEA,DRACD,Drachenblut Delikatessen,Germany,1,Nancy,Davolio,8,Northwoods Cranberry Sauce,Condiments,15,40.0,0.15,510.0
+10350,2023-04-30,2023-05-10,EMEA,DRACD,Drachenblut Delikatessen,Germany,1,Nancy,Davolio,3,Aniseed Syrup,Condiments,10,10.0,0.15,85.0
+10351,2023-07-29,2023-08-02,EMEA,DRACD,Drachenblut Delikatessen,Germany,3,Janet,Leverling,10,Ikura,Seafood,16,31.0,0.0,496.0
+10352,2023-02-19,2023-02-25,EMEA,DRACD,Drachenblut Delikatessen,Germany,9,Anne,Dodsworth,15,Genen Shouyu,Condiments,19,15.5,0.15,250.33
+10352,2023-02-19,2023-02-25,EMEA,DRACD,Drachenblut Delikatessen,Germany,9,Anne,Dodsworth,12,Queso Manchego La Pastora,Dairy Products,24,38.0,0.0,912.0
+10352,2023-02-19,2023-02-25,EMEA,DRACD,Drachenblut Delikatessen,Germany,9,Anne,Dodsworth,18,Carnarvon Tigers,Seafood,29,62.5,0.05,1721.88
+10352,2023-02-19,2023-02-25,EMEA,DRACD,Drachenblut Delikatessen,Germany,9,Anne,Dodsworth,14,Tofu,Produce,21,23.25,0.0,488.25
+10353,2024-03-02,2024-03-12,EMEA,DRACD,Drachenblut Delikatessen,Germany,7,Robert,King,12,Queso Manchego La Pastora,Dairy Products,7,38.0,0.05,252.7
+10354,2023-08-16,2023-08-22,EMEA,DRACD,Drachenblut Delikatessen,Germany,6,Michael,Suyama,18,Carnarvon Tigers,Seafood,13,62.5,0.0,812.5
+10354,2023-08-16,2023-08-22,EMEA,DRACD,Drachenblut Delikatessen,Germany,6,Michael,Suyama,12,Queso Manchego La Pastora,Dairy Products,7,38.0,0.0,266.0
+10354,2023-08-16,2023-08-22,EMEA,DRACD,Drachenblut Delikatessen,Germany,6,Michael,Suyama,2,Chang,Beverages,28,19.0,0.2,425.6
+10355,2023-08-21,2023-08-25,EMEA,DRACD,Drachenblut Delikatessen,Germany,4,Margaret,Peacock,2,Chang,Beverages,26,19.0,0.0,494.0
+10356,2024-10-15,2024-10-27,EMEA,DUMON,Du monde entier,France,4,Margaret,Peacock,5,Chef Anton's Gumbo Mix,Condiments,28,21.35,0.0,597.8
+10356,2024-10-15,2024-10-27,EMEA,DUMON,Du monde entier,France,4,Margaret,Peacock,1,Chai,Beverages,5,18.0,0.1,81.0
+10356,2024-10-15,2024-10-27,EMEA,DUMON,Du monde entier,France,4,Margaret,Peacock,9,Mishi Kobe Niku,Meat/Poultry,9,97.0,0.2,698.4
+10357,2024-10-06,2024-10-10,EMEA,DUMON,Du monde entier,France,1,Nancy,Davolio,12,Queso Manchego La Pastora,Dairy Products,26,38.0,0.2,790.4
+10358,2023-09-29,2023-10-02,EMEA,EASTC,Eastern Connection,UK,3,Janet,Leverling,17,Alice Mutton,Meat/Poultry,15,39.0,0.2,468.0
+10358,2023-09-29,2023-10-02,EMEA,EASTC,Eastern Connection,UK,3,Janet,Leverling,4,Chef Anton's Cajun Seasoning,Condiments,12,22.0,0.1,237.6
+10358,2023-09-29,2023-10-02,EMEA,EASTC,Eastern Connection,UK,3,Janet,Leverling,3,Aniseed Syrup,Condiments,19,10.0,0.0,190.0
+10358,2023-09-29,2023-10-02,EMEA,EASTC,Eastern Connection,UK,3,Janet,Leverling,16,Pavlova,Confections,15,17.45,0.1,235.58
+10359,2023-08-15,2023-08-27,EMEA,EASTC,Eastern Connection,UK,1,Nancy,Davolio,15,Genen Shouyu,Condiments,16,15.5,0.2,198.4
+10359,2023-08-15,2023-08-27,EMEA,EASTC,Eastern Connection,UK,1,Nancy,Davolio,1,Chai,Beverages,13,18.0,0.05,222.3
+10359,2023-08-15,2023-08-27,EMEA,EASTC,Eastern Connection,UK,1,Nancy,Davolio,2,Chang,Beverages,22,19.0,0.0,418.0
+10360,2024-05-17,2024-05-27,EMEA,EASTC,Eastern Connection,UK,2,Andrew,Fuller,20,Sir Rodney's Marmalade,Confections,5,81.0,0.0,405.0
+10360,2024-05-17,2024-05-27,EMEA,EASTC,Eastern Connection,UK,2,Andrew,Fuller,5,Chef Anton's Gumbo Mix,Condiments,20,21.35,0.15,362.95
+10360,2024-05-17,2024-05-27,EMEA,EASTC,Eastern Connection,UK,2,Andrew,Fuller,3,Aniseed Syrup,Condiments,19,10.0,0.1,171.0
+10361,2024-12-30,2025-01-07,EMEA,EASTC,Eastern Connection,UK,7,Robert,King,15,Genen Shouyu,Condiments,4,15.5,0.2,49.6
+10361,2024-12-30,2025-01-07,EMEA,EASTC,Eastern Connection,UK,7,Robert,King,17,Alice Mutton,Meat/Poultry,23,39.0,0.0,897.0
+10361,2024-12-30,2025-01-07,EMEA,EASTC,Eastern Connection,UK,7,Robert,King,14,Tofu,Produce,28,23.25,0.15,553.35
+10362,2024-10-28,2024-11-08,EMEA,EASTC,Eastern Connection,UK,4,Margaret,Peacock,8,Northwoods Cranberry Sauce,Condiments,13,40.0,0.05,494.0
+10362,2024-10-28,2024-11-08,EMEA,EASTC,Eastern Connection,UK,4,Margaret,Peacock,14,Tofu,Produce,24,23.25,0.0,558.0
+10362,2024-10-28,2024-11-08,EMEA,EASTC,Eastern Connection,UK,4,Margaret,Peacock,11,Queso Cabrales,Dairy Products,11,21.0,0.05,219.45
+10362,2024-10-28,2024-11-08,EMEA,EASTC,Eastern Connection,UK,4,Margaret,Peacock,15,Genen Shouyu,Condiments,11,15.5,0.15,144.92
+10363,2023-09-19,2023-09-27,EMEA,EASTC,Eastern Connection,UK,3,Janet,Leverling,3,Aniseed Syrup,Condiments,14,10.0,0.0,140.0
+10363,2023-09-19,2023-09-27,EMEA,EASTC,Eastern Connection,UK,3,Janet,Leverling,20,Sir Rodney's Marmalade,Confections,24,81.0,0.15,1652.4
+10363,2023-09-19,2023-09-27,EMEA,EASTC,Eastern Connection,UK,3,Janet,Leverling,19,Teatime Chocolate Biscuits,Confections,12,9.2,0.2,88.32
+10363,2023-09-19,2023-09-27,EMEA,EASTC,Eastern Connection,UK,3,Janet,Leverling,18,Carnarvon Tigers,Seafood,5,62.5,0.1,281.25
+10364,2023-03-03,2023-03-15,EMEA,EASTC,Eastern Connection,UK,9,Anne,Dodsworth,4,Chef Anton's Cajun Seasoning,Condiments,28,22.0,0.15,523.6
+10364,2023-03-03,2023-03-15,EMEA,EASTC,Eastern Connection,UK,9,Anne,Dodsworth,14,Tofu,Produce,25,23.25,0.05,552.19
+10364,2023-03-03,2023-03-15,EMEA,EASTC,Eastern Connection,UK,9,Anne,Dodsworth,12,Queso Manchego La Pastora,Dairy Products,28,38.0,0.15,904.4
+10365,2023-02-22,2023-03-01,EMEA,EASTC,Eastern Connection,UK,5,Steven,Buchanan,19,Teatime Chocolate Biscuits,Confections,17,9.2,0.0,156.4
+10366,2023-06-08,2023-06-18,EMEA,EASTC,Eastern Connection,UK,4,Margaret,Peacock,18,Carnarvon Tigers,Seafood,25,62.5,0.0,1562.5
+10366,2023-06-08,2023-06-18,EMEA,EASTC,Eastern Connection,UK,4,Margaret,Peacock,12,Queso Manchego La Pastora,Dairy Products,19,38.0,0.0,722.0
+10366,2023-06-08,2023-06-18,EMEA,EASTC,Eastern Connection,UK,4,Margaret,Peacock,4,Chef Anton's Cajun Seasoning,Condiments,26,22.0,0.05,543.4
+10367,2023-07-04,2023-07-11,AMER,FAMIA,Familia Arquibaldo,Brazil,5,Steven,Buchanan,1,Chai,Beverages,19,18.0,0.15,290.7
+10367,2023-07-04,2023-07-11,AMER,FAMIA,Familia Arquibaldo,Brazil,5,Steven,Buchanan,6,Grandma's Boysenberry Spread,Condiments,13,25.0,0.0,325.0
+10367,2023-07-04,2023-07-11,AMER,FAMIA,Familia Arquibaldo,Brazil,5,Steven,Buchanan,5,Chef Anton's Gumbo Mix,Condiments,5,21.35,0.15,90.74
+10368,2024-10-10,2024-10-13,AMER,FAMIA,Familia Arquibaldo,Brazil,2,Andrew,Fuller,13,Konbu,Seafood,15,6.0,0.0,90.0
+10368,2024-10-10,2024-10-13,AMER,FAMIA,Familia Arquibaldo,Brazil,2,Andrew,Fuller,14,Tofu,Produce,6,23.25,0.0,139.5
+10369,2023-11-16,2023-11-24,AMER,FAMIA,Familia Arquibaldo,Brazil,2,Andrew,Fuller,6,Grandma's Boysenberry Spread,Condiments,22,25.0,0.0,550.0
+10369,2023-11-16,2023-11-24,AMER,FAMIA,Familia Arquibaldo,Brazil,2,Andrew,Fuller,2,Chang,Beverages,9,19.0,0.05,162.45
+10370,2024-11-08,2024-11-17,AMER,FAMIA,Familia Arquibaldo,Brazil,8,Laura,Callahan,14,Tofu,Produce,4,23.25,0.0,93.0
+10370,2024-11-08,2024-11-17,AMER,FAMIA,Familia Arquibaldo,Brazil,8,Laura,Callahan,9,Mishi Kobe Niku,Meat/Poultry,14,97.0,0.0,1358.0
+10370,2024-11-08,2024-11-17,AMER,FAMIA,Familia Arquibaldo,Brazil,8,Laura,Callahan,7,Uncle Bob's Organic Dried Pears,Produce,10,30.0,0.15,255.0
+10370,2024-11-08,2024-11-17,AMER,FAMIA,Familia Arquibaldo,Brazil,8,Laura,Callahan,17,Alice Mutton,Meat/Poultry,22,39.0,0.1,772.2
+10371,2024-05-13,2024-05-24,AMER,FAMIA,Familia Arquibaldo,Brazil,5,Steven,Buchanan,13,Konbu,Seafood,1,6.0,0.0,6.0
+10371,2024-05-13,2024-05-24,AMER,FAMIA,Familia Arquibaldo,Brazil,5,Steven,Buchanan,2,Chang,Beverages,10,19.0,0.0,190.0
+10372,2023-05-21,2023-05-28,AMER,FAMIA,Familia Arquibaldo,Brazil,5,Steven,Buchanan,1,Chai,Beverages,16,18.0,0.15,244.8
+10373,2024-03-16,2024-03-21,AMER,FAMIA,Familia Arquibaldo,Brazil,3,Janet,Leverling,17,Alice Mutton,Meat/Poultry,27,39.0,0.15,895.05
+10373,2024-03-16,2024-03-21,AMER,FAMIA,Familia Arquibaldo,Brazil,3,Janet,Leverling,18,Carnarvon Tigers,Seafood,26,62.5,0.0,1625.0
+10374,2023-03-15,2023-03-24,AMER,FAMIA,Familia Arquibaldo,Brazil,1,Nancy,Davolio,15,Genen Shouyu,Condiments,30,15.5,0.0,465.0
+10375,2023-06-13,2023-06-22,EMEA,FOLIG,Folies gourmandes,France,5,Steven,Buchanan,1,Chai,Beverages,27,18.0,0.15,413.1
+10375,2023-06-13,2023-06-22,EMEA,FOLIG,Folies gourmandes,France,5,Steven,Buchanan,11,Queso Cabrales,Dairy Products,30,21.0,0.0,630.0
+10375,2023-06-13,2023-06-22,EMEA,FOLIG,Folies gourmandes,France,5,Steven,Buchanan,6,Grandma's Boysenberry Spread,Condiments,3,25.0,0.05,71.25
+10375,2023-06-13,2023-06-22,EMEA,FOLIG,Folies gourmandes,France,5,Steven,Buchanan,15,Genen Shouyu,Condiments,28,15.5,0.0,434.0
+10376,2023-03-04,2023-03-13,EMEA,FOLIG,Folies gourmandes,France,7,Robert,King,13,Konbu,Seafood,28,6.0,0.0,168.0
+10377,2023-07-10,2023-07-18,EMEA,FOLIG,Folies gourmandes,France,4,Margaret,Peacock,3,Aniseed Syrup,Condiments,21,10.0,0.0,210.0
+10377,2023-07-10,2023-07-18,EMEA,FOLIG,Folies gourmandes,France,4,Margaret,Peacock,17,Alice Mutton,Meat/Poultry,17,39.0,0.1,596.7
+10378,2024-02-24,2024-02-29,EMEA,FOLKO,Folk och fä HB,Sweden,4,Margaret,Peacock,9,Mishi Kobe Niku,Meat/Poultry,6,97.0,0.1,523.8
+10378,2024-02-24,2024-02-29,EMEA,FOLKO,Folk och fä HB,Sweden,4,Margaret,Peacock,7,Uncle Bob's Organic Dried Pears,Produce,5,30.0,0.2,120.0
+10379,2024-01-24,2024-01-28,EMEA,FOLKO,Folk och fä HB,Sweden,3,Janet,Leverling,15,Genen Shouyu,Condiments,28,15.5,0.15,368.9
+10379,2024-01-24,2024-01-28,EMEA,FOLKO,Folk och fä HB,Sweden,3,Janet,Leverling,19,Teatime Chocolate Biscuits,Confections,11,9.2,0.0,101.2
+10379,2024-01-24,2024-01-28,EMEA,FOLKO,Folk och fä HB,Sweden,3,Janet,Leverling,20,Sir Rodney's Marmalade,Confections,15,81.0,0.0,1215.0
+10379,2024-01-24,2024-01-28,EMEA,FOLKO,Folk och fä HB,Sweden,3,Janet,Leverling,11,Queso Cabrales,Dairy Products,16,21.0,0.05,319.2
+10380,2023-11-20,2023-11-27,EMEA,FOLKO,Folk och fä HB,Sweden,5,Steven,Buchanan,12,Queso Manchego La Pastora,Dairy Products,17,38.0,0.0,646.0
+10381,2023-06-08,2023-06-18,EMEA,FOLKO,Folk och fä HB,Sweden,8,Laura,Callahan,12,Queso Manchego La Pastora,Dairy Products,27,38.0,0.0,1026.0
+10382,2023-02-09,2023-02-13,EMEA,FOLKO,Folk och fä HB,Sweden,9,Anne,Dodsworth,19,Teatime Chocolate Biscuits,Confections,30,9.2,0.2,220.8
+10382,2023-02-09,2023-02-13,EMEA,FOLKO,Folk och fä HB,Sweden,9,Anne,Dodsworth,18,Carnarvon Tigers,Seafood,19,62.5,0.15,1009.38
+10382,2023-02-09,2023-02-13,EMEA,FOLKO,Folk och fä HB,Sweden,9,Anne,Dodsworth,2,Chang,Beverages,7,19.0,0.0,133.0
+10382,2023-02-09,2023-02-13,EMEA,FOLKO,Folk och fä HB,Sweden,9,Anne,Dodsworth,15,Genen Shouyu,Condiments,20,15.5,0.05,294.5
+10383,2023-09-14,2023-09-19,EMEA,FOLKO,Folk och fä HB,Sweden,1,Nancy,Davolio,11,Queso Cabrales,Dairy Products,23,21.0,0.0,483.0
+10384,2024-12-13,2024-12-23,EMEA,FRANK,Frankenversand,Germany,9,Anne,Dodsworth,12,Queso Manchego La Pastora,Dairy Products,30,38.0,0.0,1140.0
+10384,2024-12-13,2024-12-23,EMEA,FRANK,Frankenversand,Germany,9,Anne,Dodsworth,20,Sir Rodney's Marmalade,Confections,13,81.0,0.05,1000.35
+10385,2024-11-17,2024-11-29,EMEA,FRANK,Frankenversand,Germany,1,Nancy,Davolio,3,Aniseed Syrup,Condiments,18,10.0,0.15,153.0
+10385,2024-11-17,2024-11-29,EMEA,FRANK,Frankenversand,Germany,1,Nancy,Davolio,11,Queso Cabrales,Dairy Products,13,21.0,0.0,273.0
+10385,2024-11-17,2024-11-29,EMEA,FRANK,Frankenversand,Germany,1,Nancy,Davolio,4,Chef Anton's Cajun Seasoning,Condiments,9,22.0,0.15,168.3
+10386,2024-08-19,2024-08-24,EMEA,FRANS,Franchi S.p.A.,Italy,6,Michael,Suyama,5,Chef Anton's Gumbo Mix,Condiments,21,21.35,0.2,358.68
+10386,2024-08-19,2024-08-24,EMEA,FRANS,Franchi S.p.A.,Italy,6,Michael,Suyama,3,Aniseed Syrup,Condiments,11,10.0,0.2,88.0
+10386,2024-08-19,2024-08-24,EMEA,FRANS,Franchi S.p.A.,Italy,6,Michael,Suyama,10,Ikura,Seafood,5,31.0,0.15,131.75
+10386,2024-08-19,2024-08-24,EMEA,FRANS,Franchi S.p.A.,Italy,6,Michael,Suyama,13,Konbu,Seafood,23,6.0,0.2,110.4
+10387,2024-12-02,2024-12-13,EMEA,FRANS,Franchi S.p.A.,Italy,2,Andrew,Fuller,17,Alice Mutton,Meat/Poultry,10,39.0,0.0,390.0
+10387,2024-12-02,2024-12-13,EMEA,FRANS,Franchi S.p.A.,Italy,2,Andrew,Fuller,12,Queso Manchego La Pastora,Dairy Products,7,38.0,0.0,266.0
+10387,2024-12-02,2024-12-13,EMEA,FRANS,Franchi S.p.A.,Italy,2,Andrew,Fuller,1,Chai,Beverages,25,18.0,0.05,427.5
+10387,2024-12-02,2024-12-13,EMEA,FRANS,Franchi S.p.A.,Italy,2,Andrew,Fuller,19,Teatime Chocolate Biscuits,Confections,7,9.2,0.0,64.4
+10388,2023-05-21,2023-05-26,EMEA,FRANS,Franchi S.p.A.,Italy,2,Andrew,Fuller,17,Alice Mutton,Meat/Poultry,25,39.0,0.1,877.5
+10389,2024-06-23,2024-06-26,EMEA,FRANS,Franchi S.p.A.,Italy,6,Michael,Suyama,20,Sir Rodney's Marmalade,Confections,5,81.0,0.0,405.0
+10389,2024-06-23,2024-06-26,EMEA,FRANS,Franchi S.p.A.,Italy,6,Michael,Suyama,13,Konbu,Seafood,6,6.0,0.2,28.8
+10390,2024-12-10,2024-12-22,EMEA,FRANS,Franchi S.p.A.,Italy,3,Janet,Leverling,2,Chang,Beverages,15,19.0,0.1,256.5
+10390,2024-12-10,2024-12-22,EMEA,FRANS,Franchi S.p.A.,Italy,3,Janet,Leverling,14,Tofu,Produce,10,23.25,0.2,186.0
+10390,2024-12-10,2024-12-22,EMEA,FRANS,Franchi S.p.A.,Italy,3,Janet,Leverling,12,Queso Manchego La Pastora,Dairy Products,24,38.0,0.2,729.6
+10390,2024-12-10,2024-12-22,EMEA,FRANS,Franchi S.p.A.,Italy,3,Janet,Leverling,8,Northwoods Cranberry Sauce,Condiments,15,40.0,0.0,600.0
+10391,2024-06-30,2024-07-06,EMEA,FRANS,Franchi S.p.A.,Italy,5,Steven,Buchanan,12,Queso Manchego La Pastora,Dairy Products,15,38.0,0.05,541.5
+10391,2024-06-30,2024-07-06,EMEA,FRANS,Franchi S.p.A.,Italy,5,Steven,Buchanan,19,Teatime Chocolate Biscuits,Confections,25,9.2,0.0,230.0
+10392,2024-01-27,2024-02-07,EMEA,FRANS,Franchi S.p.A.,Italy,9,Anne,Dodsworth,7,Uncle Bob's Organic Dried Pears,Produce,28,30.0,0.0,840.0
+10392,2024-01-27,2024-02-07,EMEA,FRANS,Franchi S.p.A.,Italy,9,Anne,Dodsworth,5,Chef Anton's Gumbo Mix,Condiments,2,21.35,0.15,36.3
+10393,2024-05-07,2024-05-15,EMEA,FRANS,Franchi S.p.A.,Italy,9,Anne,Dodsworth,10,Ikura,Seafood,3,31.0,0.2,74.4
+10394,2023-05-31,2023-06-09,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,2,Andrew,Fuller,12,Queso Manchego La Pastora,Dairy Products,13,38.0,0.1,444.6
+10394,2023-05-31,2023-06-09,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,2,Andrew,Fuller,1,Chai,Beverages,12,18.0,0.0,216.0
+10394,2023-05-31,2023-06-09,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,2,Andrew,Fuller,14,Tofu,Produce,13,23.25,0.0,302.25
+10394,2023-05-31,2023-06-09,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,2,Andrew,Fuller,2,Chang,Beverages,12,19.0,0.0,228.0
+10395,2023-01-29,2023-02-06,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,2,Andrew,Fuller,5,Chef Anton's Gumbo Mix,Condiments,10,21.35,0.2,170.8
+10395,2023-01-29,2023-02-06,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,2,Andrew,Fuller,20,Sir Rodney's Marmalade,Confections,16,81.0,0.15,1101.6
+10395,2023-01-29,2023-02-06,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,2,Andrew,Fuller,2,Chang,Beverages,27,19.0,0.0,513.0
+10396,2024-12-23,2025-01-02,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,8,Laura,Callahan,3,Aniseed Syrup,Condiments,1,10.0,0.0,10.0
+10397,2023-08-09,2023-08-14,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,9,Anne,Dodsworth,4,Chef Anton's Cajun Seasoning,Condiments,4,22.0,0.0,88.0
+10397,2023-08-09,2023-08-14,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,9,Anne,Dodsworth,10,Ikura,Seafood,8,31.0,0.05,235.6
+10397,2023-08-09,2023-08-14,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,9,Anne,Dodsworth,8,Northwoods Cranberry Sauce,Condiments,21,40.0,0.2,672.0
+10397,2023-08-09,2023-08-14,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,9,Anne,Dodsworth,19,Teatime Chocolate Biscuits,Confections,20,9.2,0.05,174.8
+10398,2023-03-06,2023-03-10,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,8,Laura,Callahan,17,Alice Mutton,Meat/Poultry,19,39.0,0.0,741.0
+10399,2023-05-28,2023-06-04,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,7,Robert,King,8,Northwoods Cranberry Sauce,Condiments,6,40.0,0.15,204.0
+10399,2023-05-28,2023-06-04,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,7,Robert,King,19,Teatime Chocolate Biscuits,Confections,22,9.2,0.0,202.4
+10399,2023-05-28,2023-06-04,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,7,Robert,King,14,Tofu,Produce,17,23.25,0.0,395.25
+10400,2023-03-11,2023-03-22,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,9,Anne,Dodsworth,13,Konbu,Seafood,28,6.0,0.05,159.6
+10401,2023-02-14,2023-02-23,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,6,Michael,Suyama,12,Queso Manchego La Pastora,Dairy Products,26,38.0,0.0,988.0
+10402,2023-12-20,2023-12-26,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,2,Andrew,Fuller,5,Chef Anton's Gumbo Mix,Condiments,18,21.35,0.0,384.3
+10402,2023-12-20,2023-12-26,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,2,Andrew,Fuller,2,Chang,Beverages,27,19.0,0.15,436.05
+10402,2023-12-20,2023-12-26,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,2,Andrew,Fuller,12,Queso Manchego La Pastora,Dairy Products,6,38.0,0.2,182.4
+10403,2024-12-02,2024-12-12,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,8,Laura,Callahan,5,Chef Anton's Gumbo Mix,Condiments,23,21.35,0.2,392.84
+10403,2024-12-02,2024-12-12,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,8,Laura,Callahan,3,Aniseed Syrup,Condiments,15,10.0,0.0,150.0
+10404,2023-10-28,2023-11-03,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,1,Nancy,Davolio,11,Queso Cabrales,Dairy Products,30,21.0,0.0,630.0
+10405,2024-06-11,2024-06-20,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,9,Anne,Dodsworth,2,Chang,Beverages,12,19.0,0.2,182.4
+10405,2024-06-11,2024-06-20,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,9,Anne,Dodsworth,7,Uncle Bob's Organic Dried Pears,Produce,25,30.0,0.0,750.0
+10405,2024-06-11,2024-06-20,EMEA,FURIB,Furia Bacalhau e Frutos do Mar,Portugal,9,Anne,Dodsworth,10,Ikura,Seafood,28,31.0,0.15,737.8

@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Northwind Traders — Sales &amp; Churn Manifest</title>
+<style>
+  :root{
+    --paper:#F3EEE3;
+    --paper-dark:#E8E0CF;
+    --ink:#27241D;
+    --ink-soft:#5C5645;
+    --rule:#C9BFA6;
+    --rust:#A23E2C;
+    --teal:#2F5C56;
+    --gold:#B8862E;
+    --card:#FBF8F0;
+  }
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family: "Iowan Old Style","Palatino Linotype",Georgia,serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .mono{font-family:"Courier New",ui-monospace,monospace;}
+
+  /* ===== Header / Masthead ===== */
+  .masthead{
+    border-bottom:3px double var(--ink);
+    padding:28px 32px 18px;
+    background:
+      repeating-linear-gradient(0deg, rgba(0,0,0,0.015) 0px, rgba(0,0,0,0.015) 1px, transparent 1px, transparent 3px);
+  }
+  .masthead-row{
+    display:flex; justify-content:space-between; align-items:flex-end; flex-wrap:wrap; gap:10px;
+  }
+  .brand{
+    font-size:34px; letter-spacing:0.5px; font-weight:700;
+  }
+  .brand em{ font-style:italic; color:var(--rust); }
+  .manifest-tag{
+    font-family:"Courier New",monospace; font-size:11px; letter-spacing:2px;
+    text-transform:uppercase; color:var(--ink-soft); text-align:right;
+  }
+  .subhead{
+    margin-top:6px; display:flex; gap:18px; flex-wrap:wrap;
+    font-family:"Courier New",monospace; font-size:12px; color:var(--ink-soft);
+    letter-spacing:0.5px; text-transform:uppercase;
+  }
+  .subhead span b{ color:var(--ink); }
+
+  .wrap{ max-width:1180px; margin:0 auto; padding:28px 32px 60px; }
+
+  /* ===== Section labels ===== */
+  .section-label{
+    display:flex; align-items:center; gap:12px; margin:42px 0 18px;
+  }
+  .section-label .tag{
+    font-family:"Courier New",monospace; font-size:11px; letter-spacing:3px;
+    text-transform:uppercase; background:var(--ink); color:var(--paper);
+    padding:4px 10px;
+  }
+  .section-label h2{
+    font-size:22px; margin:0; font-weight:700;
+  }
+  .section-label .rule{ flex:1; border-top:1px solid var(--rule); }
+
+  /* ===== KPI strip ===== */
+  .kpi-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+  .kpi{
+    background:var(--card); border:1px solid var(--rule); padding:16px 18px;
+    position:relative;
+  }
+  .kpi::before{
+    content:""; position:absolute; top:0; left:0; width:4px; height:100%;
+    background:var(--accent,var(--rust));
+  }
+  .kpi .label{
+    font-family:"Courier New",monospace; font-size:10.5px; letter-spacing:1.5px;
+    text-transform:uppercase; color:var(--ink-soft);
+  }
+  .kpi .value{ font-size:30px; font-weight:700; margin-top:6px; }
+  .kpi .delta{ font-family:"Courier New",monospace; font-size:11.5px; margin-top:4px; color:var(--ink-soft); }
+
+  /* ===== Grid layout for charts ===== */
+  .grid-2{ display:grid; grid-template-columns:1.4fr 1fr; gap:20px; align-items:start;}
+  .grid-3{ display:grid; grid-template-columns:repeat(3,1fr); gap:20px; }
+  .panel{
+    background:var(--card); border:1px solid var(--rule); padding:20px;
+  }
+  .panel h3{
+    margin:0 0 4px; font-size:15px; letter-spacing:0.3px;
+  }
+  .panel .note{
+    font-family:"Courier New",monospace; font-size:11px; color:var(--ink-soft); margin-bottom:14px;
+  }
+
+  /* ===== Bars ===== */
+  .bar-row{ display:flex; align-items:center; gap:10px; margin-bottom:9px; font-size:13px; }
+  .bar-row .name{ width:150px; flex-shrink:0; font-family:"Courier New",monospace; font-size:11.5px; color:var(--ink-soft); }
+  .bar-track{ flex:1; background:var(--paper-dark); height:16px; position:relative; }
+  .bar-fill{ height:100%; }
+  .bar-val{ width:80px; text-align:right; font-family:"Courier New",monospace; font-size:11.5px; flex-shrink:0; }
+
+  /* ===== Monthly chart (SVG) ===== */
+  svg text{ font-family:"Courier New",monospace; }
+
+  /* ===== Churn table ===== */
+  table{ width:100%; border-collapse:collapse; font-size:12.5px; }
+  th{
+    text-align:left; font-family:"Courier New",monospace; font-size:10.5px;
+    letter-spacing:1px; text-transform:uppercase; color:var(--ink-soft);
+    border-bottom:2px solid var(--ink); padding:8px 10px;
+    cursor:pointer; user-select:none;
+  }
+  th:hover{ color:var(--rust); }
+  th.sorted::after{ content:" \25BE"; }
+  td{ padding:7px 10px; border-bottom:1px solid var(--rule); }
+  tr:hover td{ background:rgba(184,134,46,0.07); }
+  .tag-pill{
+    font-family:"Courier New",monospace; font-size:10.5px; padding:2px 8px;
+    border-radius:2px; letter-spacing:0.5px;
+  }
+  .tag-Active{ background:rgba(47,92,86,0.15); color:var(--teal); }
+  .tag-AtRisk{ background:rgba(184,134,46,0.18); color:var(--gold); }
+  .tag-Churned{ background:rgba(162,62,44,0.15); color:var(--rust); }
+
+  .filter-row{ display:flex; gap:8px; margin-bottom:14px; flex-wrap:wrap; }
+  .filter-btn{
+    font-family:"Courier New",monospace; font-size:11px; letter-spacing:0.5px;
+    padding:6px 12px; border:1px solid var(--ink); background:transparent;
+    cursor:pointer; color:var(--ink); text-transform:uppercase;
+  }
+  .filter-btn.active{ background:var(--ink); color:var(--paper); }
+
+  footer{
+    margin-top:50px; padding-top:18px; border-top:1px solid var(--rule);
+    font-family:"Courier New",monospace; font-size:10.5px; color:var(--ink-soft);
+    display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;
+  }
+
+  @media (max-width:880px){
+    .kpi-row{ grid-template-columns:repeat(2,1fr); }
+    .grid-2{ grid-template-columns:1fr; }
+    .grid-3{ grid-template-columns:1fr; }
+    .bar-row .name{ width:100px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="masthead">
+  <div class="masthead-row">
+    <div class="brand">Northwind Traders <em>Manifest</em></div>
+    <div class="manifest-tag">Ledger No. SC-0426<br>Compiled 2026</div>
+  </div>
+  <div class="subhead">
+    <span>Objective: <b>Sales Performance</b></span>
+    <span>Objective: <b>Customer Churn</b></span>
+    <span>Sources: <b>DB + Object Store</b></span>
+    <span>Window: <b>Jan 2023 &ndash; Dec 2024</b></span>
+  </div>
+</div>
+
+<div class="wrap">
+
+  <!-- ============ SALES PERFORMANCE ============ -->
+  <div class="section-label">
+    <span class="tag">Folio I</span>
+    <h2>Sales Performance</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="kpi-row" id="kpi-sales"></div>
+
+  <div class="grid-2" style="margin-top:20px;">
+    <div class="panel">
+      <h3>Revenue by Month</h3>
+      <div class="note">total_revenue, gold_sales_monthly</div>
+      <div id="monthly-chart"></div>
+    </div>
+    <div class="panel">
+      <h3>Revenue by Category</h3>
+      <div class="note">gold_sales_by_category</div>
+      <div id="category-bars"></div>
+    </div>
+  </div>
+
+  <div class="grid-2" style="margin-top:20px;">
+    <div class="panel">
+      <h3>Top 10 Products</h3>
+      <div class="note">gold_top_products, ranked by revenue</div>
+      <div id="top-products"></div>
+    </div>
+    <div class="panel">
+      <h3>Revenue by Region</h3>
+      <div class="note">gold_sales_by_region</div>
+      <div id="region-bars"></div>
+    </div>
+  </div>
+
+  <!-- ============ CUSTOMER CHURN ============ -->
+  <div class="section-label">
+    <span class="tag">Folio II</span>
+    <h2>Customer Churn</h2>
+    <div class="rule"></div>
+  </div>
+
+  <div class="kpi-row" id="kpi-churn"></div>
+
+  <div class="grid-3" style="margin-top:20px;">
+    <div class="panel" style="grid-column: span 1;">
+      <h3>Churn Rate by Region</h3>
+      <div class="note">gold_churn_summary &middot; threshold 180 days</div>
+      <div id="churn-region-bars"></div>
+    </div>
+    <div class="panel" style="grid-column: span 2;">
+      <h3>Customer Roster</h3>
+      <div class="note">gold_customer_churn &middot; click a column to sort, or filter by segment</div>
+      <div class="filter-row" id="segment-filters"></div>
+      <div style="max-height:420px; overflow-y:auto;">
+        <table id="churn-table">
+          <thead>
+            <tr>
+              <th data-key="company_name">Customer</th>
+              <th data-key="region">Region</th>
+              <th data-key="frequency_orders">Orders</th>
+              <th data-key="monetary_total">Revenue</th>
+              <th data-key="recency_days">Days Since Order</th>
+              <th data-key="customer_segment">Segment</th>
+            </tr>
+          </thead>
+          <tbody id="churn-tbody"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span>Data: Microsoft Northwind sample database (sql-server-samples, GitHub) &middot; DB source = relational tables &middot; Object Store source = CSV/JSON files</span>
+    <span>Pipeline: Databricks (Medallion) + Snowflake &rarr; Gold layer</span>
+  </footer>
+</div>
+
+<script>
+const DATA = {"gold_sales_monthly": [{"year_month": "2023-01", "total_revenue": 7287.4, "order_count": 5, "active_customers": 5}, {"year_month": "2023-02", "total_revenue": 14197.35, "order_count": 11, "active_customers": 10}, {"year_month": "2023-03", "total_revenue": 11070.55, "order_count": 10, "active_customers": 8}, {"year_month": "2023-04", "total_revenue": 11891.25, "order_count": 6, "active_customers": 6}, {"year_month": "2023-05", "total_revenue": 15671.03, "order_count": 11, "active_customers": 10}, {"year_month": "2023-06", "total_revenue": 8474.3, "order_count": 7, "active_customers": 7}, {"year_month": "2023-07", "total_revenue": 7333.15, "order_count": 9, "active_customers": 8}, {"year_month": "2023-08", "total_revenue": 14492.86, "order_count": 13, "active_customers": 10}, {"year_month": "2023-09", "total_revenue": 12737.44, "order_count": 10, "active_customers": 8}, {"year_month": "2023-10", "total_revenue": 4622.2, "order_count": 3, "active_customers": 3}, {"year_month": "2023-11", "total_revenue": 2731.9, "order_count": 4, "active_customers": 4}, {"year_month": "2023-12", "total_revenue": 3212.4, "order_count": 3, "active_customers": 3}, {"year_month": "2024-01", "total_revenue": 5358.68, "order_count": 5, "active_customers": 5}, {"year_month": "2024-02", "total_revenue": 1732.28, "order_count": 3, "active_customers": 2}, {"year_month": "2024-03", "total_revenue": 3240.04, "order_count": 4, "active_customers": 4}, {"year_month": "2024-04", "total_revenue": 4725.18, "order_count": 3, "active_customers": 1}, {"year_month": "2024-05", "total_revenue": 1851.35, "order_count": 5, "active_customers": 4}, {"year_month": "2024-06", "total_revenue": 2875.5, "order_count": 3, "active_customers": 2}, {"year_month": "2024-07", "total_revenue": 7484.01, "order_count": 4, "active_customers": 3}, {"year_month": "2024-08", "total_revenue": 9402.39, "order_count": 8, "active_customers": 5}, {"year_month": "2024-09", "total_revenue": 2384.1, "order_count": 2, "active_customers": 2}, {"year_month": "2024-10", "total_revenue": 10447.27, "order_count": 9, "active_customers": 7}, {"year_month": "2024-11", "total_revenue": 9564.8, "order_count": 8, "active_customers": 6}, {"year_month": "2024-12", "total_revenue": 17856.33, "order_count": 12, "active_customers": 10}], "gold_sales_by_category": [{"category_name": "Meat/Poultry", "total_revenue": 50047.7, "units_sold": 783}, {"category_name": "Condiments", "total_revenue": 35958.8, "units_sold": 1855}, {"category_name": "Seafood", "total_revenue": 31444.7, "units_sold": 943}, {"category_name": "Confections", "total_revenue": 26355.61, "units_sold": 788}, {"category_name": "Dairy Products", "total_revenue": 19843.2, "units_sold": 674}, {"category_name": "Beverages", "total_revenue": 14105.9, "units_sold": 818}, {"category_name": "Produce", "total_revenue": 12887.85, "units_sold": 544}], "gold_sales_by_region": [{"region": "EMEA", "total_revenue": 137961.86, "order_count": 113}, {"region": "AMER", "total_revenue": 52681.9, "order_count": 45}], "gold_top_products": [{"product_id": 9, "product_name": "Mishi Kobe Niku", "category_name": "Meat/Poultry", "total_revenue": 36699.95, "units_sold": 414}, {"product_id": 18, "product_name": "Carnarvon Tigers", "category_name": "Seafood", "total_revenue": 22709.4, "units_sold": 387}, {"product_id": 20, "product_name": "Sir Rodney's Marmalade", "category_name": "Confections", "total_revenue": 20128.5, "units_sold": 273}, {"product_id": 12, "product_name": "Queso Manchego La Pastora", "category_name": "Dairy Products", "total_revenue": 14261.4, "units_sold": 403}, {"product_id": 17, "product_name": "Alice Mutton", "category_name": "Meat/Poultry", "total_revenue": 13347.75, "units_sold": 369}, {"product_id": 8, "product_name": "Northwoods Cranberry Sauce", "category_name": "Condiments", "total_revenue": 10762.0, "units_sold": 288}, {"product_id": 14, "product_name": "Tofu", "category_name": "Produce", "total_revenue": 7946.85, "units_sold": 366}, {"product_id": 2, "product_name": "Chang", "category_name": "Beverages", "total_revenue": 7288.4, "units_sold": 407}, {"product_id": 10, "product_name": "Ikura", "category_name": "Seafood", "total_revenue": 6999.8, "units_sold": 237}, {"product_id": 15, "product_name": "Genen Shouyu", "category_name": "Condiments", "total_revenue": 6840.92, "units_sold": 487}], "gold_customer_churn": [{"customer_id": "CACTU", "company_name": "Cactus Comidas para llevar", "country": "Argentina", "region": "AMER", "frequency_orders": 5, "monetary_total": 3096.93, "last_order_date": "2023-08-19", "first_order_date": "2023-02-11", "recency_days": 501, "avg_order_value": 619.39, "is_churned": true, "customer_segment": "Churned"}, {"customer_id": "DRACD", "company_name": "Drachenblut Delikatessen", "country": "Germany", "region": "EMEA", "frequency_orders": 6, "monetary_total": 8075.06, "last_order_date": "2024-03-02", "first_order_date": "2023-02-19", "recency_days": 305, "avg_order_value": 1345.84, "is_churned": true, "customer_segment": "Churned"}, {"customer_id": "FRANS", "company_name": "Franchi S.p.A.", "country": "Italy", "region": "EMEA", "frequency_orders": 8, "monetary_total": 6642.33, "last_order_date": "2024-12-10", "first_order_date": "2023-05-21", "recency_days": 22, "avg_order_value": 830.29, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "CENTC", "company_name": "Centro comercial Moctezuma", "country": "Mexico", "region": "AMER", "frequency_orders": 3, "monetary_total": 3602.1, "last_order_date": "2024-12-27", "first_order_date": "2024-10-06", "recency_days": 5, "avg_order_value": 1200.7, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "BOTTM", "company_name": "Bottom-Dollar Markets", "country": "Canada", "region": "AMER", "frequency_orders": 12, "monetary_total": 14177.79, "last_order_date": "2024-11-24", "first_order_date": "2023-02-16", "recency_days": 38, "avg_order_value": 1181.48, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "DUMON", "company_name": "Du monde entier", "country": "France", "region": "EMEA", "frequency_orders": 2, "monetary_total": 2167.6, "last_order_date": "2024-10-15", "first_order_date": "2024-10-06", "recency_days": 78, "avg_order_value": 1083.8, "is_churned": false, "customer_segment": "At Risk"}, {"customer_id": "ANATR", "company_name": "Ana Trujillo Emparedados", "country": "Mexico", "region": "AMER", "frequency_orders": 6, "monetary_total": 7960.2, "last_order_date": "2023-12-19", "first_order_date": "2023-04-09", "recency_days": 379, "avg_order_value": 1326.7, "is_churned": true, "customer_segment": "Churned"}, {"customer_id": "BLONP", "company_name": "Blondesddsl p\u00e8re et fils", "country": "France", "region": "EMEA", "frequency_orders": 5, "monetary_total": 4626.9, "last_order_date": "2023-12-06", "first_order_date": "2023-04-08", "recency_days": 392, "avg_order_value": 925.38, "is_churned": true, "customer_segment": "Churned"}, {"customer_id": "ANTON", "company_name": "Antonio Moreno Taquer\u00eda", "country": "Mexico", "region": "AMER", "frequency_orders": 2, "monetary_total": 7308.47, "last_order_date": "2024-12-09", "first_order_date": "2024-10-30", "recency_days": 23, "avg_order_value": 3654.24, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "EASTC", "company_name": "Eastern Connection", "country": "UK", "region": "EMEA", "frequency_orders": 9, "monetary_total": 12951.61, "last_order_date": "2024-12-30", "first_order_date": "2023-02-22", "recency_days": 2, "avg_order_value": 1439.07, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "FOLKO", "company_name": "Folk och f\u00e4 HB", "country": "Sweden", "region": "EMEA", "frequency_orders": 6, "monetary_total": 6460.78, "last_order_date": "2024-02-24", "first_order_date": "2023-02-09", "recency_days": 312, "avg_order_value": 1076.8, "is_churned": true, "customer_segment": "Churned"}, {"customer_id": "FAMIA", "company_name": "Familia Arquibaldo", "country": "Brazil", "region": "AMER", "frequency_orders": 8, "monetary_total": 7552.44, "last_order_date": "2024-11-08", "first_order_date": "2023-03-15", "recency_days": 54, "avg_order_value": 944.06, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "COMMI", "company_name": "Com\u00e9rcio Mineiro", "country": "Brazil", "region": "AMER", "frequency_orders": 9, "monetary_total": 8983.97, "last_order_date": "2024-12-11", "first_order_date": "2023-02-04", "recency_days": 21, "avg_order_value": 998.22, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "FRANK", "company_name": "Frankenversand", "country": "Germany", "region": "EMEA", "frequency_orders": 2, "monetary_total": 2734.65, "last_order_date": "2024-12-13", "first_order_date": "2024-11-17", "recency_days": 19, "avg_order_value": 1367.33, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "CONSH", "company_name": "Consolidated Holdings", "country": "UK", "region": "EMEA", "frequency_orders": 2, "monetary_total": 5313.8, "last_order_date": "2023-05-09", "first_order_date": "2023-04-12", "recency_days": 603, "avg_order_value": 2656.9, "is_churned": true, "customer_segment": "Churned"}, {"customer_id": "BSBEV", "company_name": "B's Beverages", "country": "UK", "region": "EMEA", "frequency_orders": 2, "monetary_total": 2108.85, "last_order_date": "2023-06-08", "first_order_date": "2023-05-28", "recency_days": 573, "avg_order_value": 1054.43, "is_churned": true, "customer_segment": "Churned"}, {"customer_id": "AROUT", "company_name": "Around the Horn", "country": "UK", "region": "EMEA", "frequency_orders": 10, "monetary_total": 17198.48, "last_order_date": "2024-12-07", "first_order_date": "2023-02-25", "recency_days": 25, "avg_order_value": 1719.85, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "BOLID", "company_name": "B\u00f3lido Comidas preparadas", "country": "Spain", "region": "EMEA", "frequency_orders": 2, "monetary_total": 3195.26, "last_order_date": "2024-12-14", "first_order_date": "2024-11-08", "recency_days": 18, "avg_order_value": 1597.63, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "BERGS", "company_name": "Berglunds snabbk\u00f6p", "country": "Sweden", "region": "EMEA", "frequency_orders": 10, "monetary_total": 15858.92, "last_order_date": "2024-10-22", "first_order_date": "2023-03-24", "recency_days": 71, "avg_order_value": 1585.89, "is_churned": false, "customer_segment": "At Risk"}, {"customer_id": "FURIB", "company_name": "Furia Bacalhau e Frutos do Mar", "country": "Portugal", "region": "EMEA", "frequency_orders": 12, "monetary_total": 10692.69, "last_order_date": "2024-12-23", "first_order_date": "2023-01-29", "recency_days": 9, "avg_order_value": 891.06, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "ALFKI", "company_name": "Alfreds Futterkiste", "country": "Germany", "region": "EMEA", "frequency_orders": 4, "monetary_total": 6807.67, "last_order_date": "2023-07-03", "first_order_date": "2023-01-27", "recency_days": 548, "avg_order_value": 1701.92, "is_churned": true, "customer_segment": "Churned"}, {"customer_id": "BLAUS", "company_name": "Blauer See Delikatessen", "country": "Germany", "region": "EMEA", "frequency_orders": 3, "monetary_total": 2575.38, "last_order_date": "2023-07-20", "first_order_date": "2023-01-11", "recency_days": 531, "avg_order_value": 858.46, "is_churned": true, "customer_segment": "Churned"}, {"customer_id": "CHOPS", "company_name": "Chop-suey Chinese", "country": "Switzerland", "region": "EMEA", "frequency_orders": 13, "monetary_total": 12889.67, "last_order_date": "2024-11-06", "first_order_date": "2023-01-30", "recency_days": 56, "avg_order_value": 991.51, "is_churned": false, "customer_segment": "Active"}, {"customer_id": "FOLIG", "company_name": "Folies gourmandes", "country": "France", "region": "EMEA", "frequency_orders": 3, "monetary_total": 2523.05, "last_order_date": "2023-07-10", "first_order_date": "2023-03-04", "recency_days": 541, "avg_order_value": 841.02, "is_churned": true, "customer_segment": "Churned"}, {"customer_id": "BONAP", "company_name": "Bon app'", "country": "France", "region": "EMEA", "frequency_orders": 14, "monetary_total": 15139.16, "last_order_date": "2024-12-24", "first_order_date": "2023-01-21", "recency_days": 8, "avg_order_value": 1081.37, "is_churned": false, "customer_segment": "Active"}], "gold_churn_summary": [{"region": "EMEA", "total_customers": 18, "churned_customers": 8, "churn_rate_pct": 44.4}, {"region": "AMER", "total_customers": 7, "churned_customers": 2, "churn_rate_pct": 28.6}]};
+
+function fmtMoney(n){
+  return "$" + Number(n).toLocaleString("en-US", {minimumFractionDigits:0, maximumFractionDigits:0});
+}
+function fmtMoney2(n){
+  return "$" + Number(n).toLocaleString("en-US", {minimumFractionDigits:2, maximumFractionDigits:2});
+}
+
+/* ---------- KPI: Sales ---------- */
+(function(){
+  const monthly = DATA.gold_sales_monthly;
+  const totalRevenue = monthly.reduce((a,b)=>a+b.total_revenue,0);
+  const totalOrders = monthly.reduce((a,b)=>a+b.order_count,0);
+  const lastMonth = monthly[monthly.length-1];
+  const prevMonth = monthly[monthly.length-2];
+  const momChange = (((lastMonth.total_revenue - prevMonth.total_revenue)/prevMonth.total_revenue)*100).toFixed(1);
+  const avgOrderVal = totalRevenue/totalOrders;
+
+  const kpis = [
+    {label:"Total Revenue", value: fmtMoney(totalRevenue), delta:"24-month window", accent:"var(--rust)"},
+    {label:"Total Orders", value: totalOrders, delta: monthly.length+" months tracked", accent:"var(--teal)"},
+    {label:"Avg Order Value", value: fmtMoney(avgOrderVal), delta:"per order", accent:"var(--gold)"},
+    {label:"Latest Month MoM", value: (momChange>=0?"+":"")+momChange+"%", delta: lastMonth.year_month+" vs prior", accent: momChange>=0 ? "var(--teal)" : "var(--rust)"},
+  ];
+  document.getElementById("kpi-sales").innerHTML = kpis.map(k=>
+    `<div class="kpi" style="--accent:${k.accent}">
+      <div class="label">${k.label}</div>
+      <div class="value">${k.value}</div>
+      <div class="delta">${k.delta}</div>
+    </div>`).join("");
+})();
+
+/* ---------- Monthly revenue chart (SVG line+bars) ---------- */
+(function(){
+  const monthly = DATA.gold_sales_monthly;
+  const w = 520, h = 220, padL = 40, padB = 30, padT = 10, padR=10;
+  const max = Math.max(...monthly.map(d=>d.total_revenue));
+  const barW = (w - padL - padR) / monthly.length;
+
+  let bars = "", labels = "";
+  monthly.forEach((d,i)=>{
+    const bh = (d.total_revenue/max) * (h - padT - padB);
+    const x = padL + i*barW;
+    const y = h - padB - bh;
+    bars += `<rect x="${x+1}" y="${y}" width="${barW-2}" height="${bh}" fill="${i===monthly.length-1?'var(--rust)':'var(--gold)'}" opacity="0.85"></rect>`;
+    if(i % 3 === 0){
+      labels += `<text x="${x+barW/2}" y="${h-padB+14}" font-size="9" fill="var(--ink-soft)" text-anchor="middle">${d.year_month.slice(2)}</text>`;
+    }
+  });
+  // y axis gridlines
+  let grid = "";
+  for(let g=0; g<=4; g++){
+    const gy = padT + g*(h-padT-padB)/4;
+    const val = Math.round(max - g*(max/4));
+    grid += `<line x1="${padL}" y1="${gy}" x2="${w-padR}" y2="${gy}" stroke="var(--rule)" stroke-width="1"></line>`;
+    grid += `<text x="${padL-6}" y="${gy+3}" font-size="9" fill="var(--ink-soft)" text-anchor="end">${(val/1000).toFixed(0)}k</text>`;
+  }
+  document.getElementById("monthly-chart").innerHTML =
+    `<svg viewBox="0 0 ${w} ${h}" width="100%" height="220">${grid}${bars}${labels}</svg>`;
+})();
+
+/* ---------- Category bars ---------- */
+(function(){
+  const cats = DATA.gold_sales_by_category;
+  const max = Math.max(...cats.map(c=>c.total_revenue));
+  const colors = ["var(--rust)","var(--teal)","var(--gold)","#7A6A4F","#8C4A3A","#3D6E66","#A78A45"];
+  document.getElementById("category-bars").innerHTML = cats.map((c,i)=>
+    `<div class="bar-row">
+      <div class="name">${c.category_name}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(c.total_revenue/max*100).toFixed(1)}%; background:${colors[i%colors.length]}"></div></div>
+      <div class="bar-val">${fmtMoney(c.total_revenue)}</div>
+    </div>`).join("");
+})();
+
+/* ---------- Top products ---------- */
+(function(){
+  const prods = DATA.gold_top_products;
+  const max = Math.max(...prods.map(p=>p.total_revenue));
+  document.getElementById("top-products").innerHTML = prods.map((p,i)=>
+    `<div class="bar-row">
+      <div class="name">${(i+1)}. ${p.product_name}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(p.total_revenue/max*100).toFixed(1)}%; background:var(--rust)"></div></div>
+      <div class="bar-val">${fmtMoney(p.total_revenue)}</div>
+    </div>`).join("");
+})();
+
+/* ---------- Region bars (sales) ---------- */
+(function(){
+  const regions = DATA.gold_sales_by_region;
+  const max = Math.max(...regions.map(r=>r.total_revenue));
+  document.getElementById("region-bars").innerHTML = regions.map(r=>
+    `<div class="bar-row">
+      <div class="name">${r.region} &middot; ${r.order_count} orders</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(r.total_revenue/max*100).toFixed(1)}%; background:var(--teal)"></div></div>
+      <div class="bar-val">${fmtMoney(r.total_revenue)}</div>
+    </div>`).join("");
+})();
+
+/* ---------- KPI: Churn ---------- */
+(function(){
+  const churn = DATA.gold_customer_churn;
+  const total = churn.length;
+  const churned = churn.filter(c=>c.is_churned).length;
+  const atRisk = churn.filter(c=>c.customer_segment==="At Risk").length;
+  const active = churn.filter(c=>c.customer_segment==="Active").length;
+  const churnRate = (churned/total*100).toFixed(1);
+
+  const kpis = [
+    {label:"Churn Rate", value: churnRate+"%", delta: churned+" of "+total+" customers", accent:"var(--rust)"},
+    {label:"Active Customers", value: active, delta:"ordered within 60 days", accent:"var(--teal)"},
+    {label:"At Risk", value: atRisk, delta:"60-180 days since order", accent:"var(--gold)"},
+    {label:"Churned", value: churned, delta:"180+ days since order", accent:"var(--rust)"},
+  ];
+  document.getElementById("kpi-churn").innerHTML = kpis.map(k=>
+    `<div class="kpi" style="--accent:${k.accent}">
+      <div class="label">${k.label}</div>
+      <div class="value">${k.value}</div>
+      <div class="delta">${k.delta}</div>
+    </div>`).join("");
+})();
+
+/* ---------- Churn rate by region ---------- */
+(function(){
+  const summary = DATA.gold_churn_summary;
+  const max = Math.max(...summary.map(s=>s.churn_rate_pct));
+  document.getElementById("churn-region-bars").innerHTML = summary.map(s=>
+    `<div class="bar-row">
+      <div class="name">${s.region}</div>
+      <div class="bar-track"><div class="bar-fill" style="width:${(s.churn_rate_pct/max*100).toFixed(1)}%; background:var(--rust)"></div></div>
+      <div class="bar-val">${s.churn_rate_pct}%</div>
+    </div>`).join("") +
+    `<div style="margin-top:10px; font-family:'Courier New',monospace; font-size:11px; color:var(--ink-soft);">` +
+    summary.map(s=>`${s.region}: ${s.churned_customers}/${s.total_customers} churned`).join(" &middot; ") +
+    `</div>`;
+})();
+
+/* ---------- Customer roster table: sortable + filterable ---------- */
+(function(){
+  let rows = DATA.gold_customer_churn.slice();
+  let sortKey = "recency_days";
+  let sortDir = -1;
+  let segmentFilter = "All";
+
+  const segments = ["All","Active","At Risk","Churned"];
+  document.getElementById("segment-filters").innerHTML = segments.map(s=>
+    `<button class="filter-btn ${s==='All'?'active':''}" data-seg="${s}">${s}</button>`).join("");
+
+  function classFor(seg){ return seg.replace(" ",""); }
+
+  function render(){
+    let filtered = segmentFilter==="All" ? rows : rows.filter(r=>r.customer_segment===segmentFilter);
+    filtered.sort((a,b)=>{
+      const av=a[sortKey], bv=b[sortKey];
+      if(typeof av === "string") return sortDir * av.localeCompare(bv);
+      return sortDir * (av-bv);
+    });
+    document.getElementById("churn-tbody").innerHTML = filtered.map(r=>
+      `<tr>
+        <td>${r.company_name}</td>
+        <td class="mono">${r.region}</td>
+        <td class="mono">${r.frequency_orders}</td>
+        <td class="mono">${fmtMoney2(r.monetary_total)}</td>
+        <td class="mono">${r.recency_days}</td>
+        <td><span class="tag-pill tag-${classFor(r.customer_segment)}">${r.customer_segment}</span></td>
+      </tr>`).join("");
+  }
+
+  document.querySelectorAll("#churn-table th").forEach(th=>{
+    th.addEventListener("click", ()=>{
+      const key = th.dataset.key;
+      if(sortKey===key){ sortDir *= -1; } else { sortKey = key; sortDir = 1; }
+      document.querySelectorAll("#churn-table th").forEach(t=>t.classList.remove("sorted"));
+      th.classList.add("sorted");
+      render();
+    });
+  });
+
+  document.getElementById("segment-filters").addEventListener("click", (e)=>{
+    if(e.target.classList.contains("filter-btn")){
+      document.querySelectorAll(".filter-btn").forEach(b=>b.classList.remove("active"));
+      e.target.classList.add("active");
+      segmentFilter = e.target.dataset.seg;
+      render();
+    }
+  });
+
+  render();
+})();
+</script>
+
+</body>
+</html>
